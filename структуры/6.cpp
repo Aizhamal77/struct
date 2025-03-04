@@ -9,7 +9,7 @@ int main() {
     etype position;    
 
    
-    cout << "Ââåäèòå ïåðâóþ áóêâó äîëæíîñòè (laborer, secretary, manager, accountant, executive, researcher): ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¯Ã¥Ã°Ã¢Ã³Ã¾ Ã¡Ã³ÃªÃ¢Ã³ Ã¤Ã®Ã«Ã¦Ã­Ã®Ã±Ã²Ã¨ (laborer, secretary, manager, accountant, executive, researcher): ";
     cin >> first_letter;
 
     switch (first_letter) {
@@ -26,11 +26,11 @@ int main() {
     case 'r':
     case 'R': position = researcher; break;
     default:
-        cout << "Íåâåðíàÿ ïåðâàÿ áóêâà!" << endl;
+        cout << "ÃÃ¥Ã¢Ã¥Ã°Ã­Ã Ã¿ Ã¯Ã¥Ã°Ã¢Ã Ã¿ Ã¡Ã³ÃªÃ¢Ã !" << endl;
         return 1;  
     }
 
-    cout << "Ïîëíîå íàçâàíèå äîëæíîñòè: ";
+    cout << "ÃÃ®Ã«Ã­Ã®Ã¥ Ã­Ã Ã§Ã¢Ã Ã­Ã¨Ã¥ Ã¤Ã®Ã«Ã¦Ã­Ã®Ã±Ã²Ã¨: ";
 
     switch (position) {
     case laborer: cout << "laborer"; break;
