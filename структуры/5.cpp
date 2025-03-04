@@ -14,10 +14,10 @@ int main()
     setlocale(LC_ALL, "Rus");
     date user_date; 
 
-    cout << "Ââåäèòå äàòó â ôîðìàòå ÄÄ/ÌÌ/ÃÃÃÃ: ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã²Ã³ Ã¢ Ã´Ã®Ã°Ã¬Ã Ã²Ã¥ Ã„Ã„/ÃŒÃŒ/ÃƒÃƒÃƒÃƒ: ";
     scanf("%d/%d/%d", &user_date.day, &user_date.month, &user_date.year);
 
-    cout << "\nÂàøà äàòà: "
+    cout << "\nÃ‚Ã Ã¸Ã  Ã¤Ã Ã²Ã : "
         << user_date.day << "/"
         << user_date.month << "/"
         << user_date.year << endl;
