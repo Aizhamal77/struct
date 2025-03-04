@@ -12,7 +12,7 @@ int main() {
     setlocale(LC_ALL, "Rus");
     double decimalPounds;
 
-    cout << "Ââåäèòå ñóììó â ôóíòàõ (äåñÿòè÷íàÿ ñèñòåìà): ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã³Ã¬Ã¬Ã³ Ã¢ Ã´Ã³Ã­Ã²Ã Ãµ (Ã¤Ã¥Ã±Ã¿Ã²Ã¨Ã·Ã­Ã Ã¿ Ã±Ã¨Ã±Ã²Ã¥Ã¬Ã ): ";
     cin >> decimalPounds;
 
 
@@ -22,10 +22,10 @@ int main() {
     money.pence = int(((decimalPounds - money.pounds) * 20 - money.shillings) * 12); 
 
    
-    cout << "Ñóììà â ñòàðîé ñèñòåìå: "
-        << money.pounds << " ôóíòîâ, "
-        << money.shillings << " øèëëèíãîâ, "
-        << money.pence << " ïåíñîâ." << endl;
+    cout << "Ã‘Ã³Ã¬Ã¬Ã  Ã¢ Ã±Ã²Ã Ã°Ã®Ã© Ã±Ã¨Ã±Ã²Ã¥Ã¬Ã¥: "
+        << money.pounds << " Ã´Ã³Ã­Ã²Ã®Ã¢, "
+        << money.shillings << " Ã¸Ã¨Ã«Ã«Ã¨Ã­Ã£Ã®Ã¢, "
+        << money.pence << " Ã¯Ã¥Ã­Ã±Ã®Ã¢." << endl;
 
     return 0;
 }
