@@ -19,6 +19,6 @@ int main(){
 	l = room1.length.feet + room1.length.inches / 12.0;
 	w = room1.width.feet + room1.width.inches / 12.0;
 	h = room1.height.feet + room1.height.inches / 12.0;
-	cout << "Îáúåì =" << l * w * h << " êóáè÷åñêèõ ôóòîâ \n ";
+	cout << "ÃŽÃ¡ÃºÃ¥Ã¬ =" << l * w * h << " ÃªÃ³Ã¡Ã¨Ã·Ã¥Ã±ÃªÃ¨Ãµ Ã´Ã³Ã²Ã®Ã¢ \n ";
 	return 0;
 }
