@@ -9,15 +9,15 @@ private:
 
 public:
     void getdata() {
-        cout << "\nÂâåäèòå çàãîëîâîê: ";
+        cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã§Ã Ã£Ã®Ã«Ã®Ã¢Ã®Ãª: ";
         cin >> title;
-        cout << "Ââåäèòå öåíó: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¶Ã¥Ã­Ã³: ";
         cin >> price;
     }
 
     void putdata() const {
-        cout << "\nÇàãîëîâîê: " << title;
-        cout << "\nÖåíà: " << price;
+        cout << "\nÃ‡Ã Ã£Ã®Ã«Ã®Ã¢Ã®Ãª: " << title;
+        cout << "\nÃ–Ã¥Ã­Ã : " << price;
     }
 };
 
@@ -28,16 +28,16 @@ private:
 
 public:
     void getdata() {
-        cout << "Ââåäèòå îáúåì ïðîäàæ çà 3 ìåñÿöà:\n ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã®Ã¡ÃºÃ¥Ã¬ Ã¯Ã°Ã®Ã¤Ã Ã¦ Ã§Ã  3 Ã¬Ã¥Ã±Ã¿Ã¶Ã :\n ";
         for (int j = 0; j < MONTHS; j++) {
-            cout << " Ìåñÿö " << j + 1 << ": ";
+            cout << " ÃŒÃ¥Ã±Ã¿Ã¶ " << j + 1 << ": ";
             cin >> salesArr[j];
         }
     }
 
     void putdata() const {
         for (int j = 0; j < MONTHS; j++) {
-            cout << "\nÏðîäàæè çà ìåñÿö " << j + 1 << ": " << salesArr[j];
+            cout << "\nÃÃ°Ã®Ã¤Ã Ã¦Ã¨ Ã§Ã  Ã¬Ã¥Ã±Ã¿Ã¶ " << j + 1 << ": " << salesArr[j];
         }
     }
 };
@@ -49,14 +49,14 @@ private:
 public:
     void getdata() {
         publication::getdata();
-        cout << "Ââåäèòå ÷èñëî ñòðàíèö: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã±Ã²Ã°Ã Ã­Ã¨Ã¶: ";
         cin >> pages;
         sales::getdata();
     }
 
     void putdata() const {
         publication::putdata();
-        cout << "\nÑòðàíèö: " << pages;
+        cout << "\nÃ‘Ã²Ã°Ã Ã­Ã¨Ã¶: " << pages;
         sales::putdata();
     }
 };
@@ -68,14 +68,14 @@ private:
 public:
     void getdata() {
         publication::getdata();
-        cout << "Ââåäèòå âðåìÿ çâó÷àíèÿ: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã°Ã¥Ã¬Ã¿ Ã§Ã¢Ã³Ã·Ã Ã­Ã¨Ã¿: ";
         cin >> time;
         sales::getdata();
     }
 
     void putdata() const {
         publication::putdata();
-        cout << "\nÂðåìÿ çâó÷àíèÿ: " << time;
+        cout << "\nÃ‚Ã°Ã¥Ã¬Ã¿ Ã§Ã¢Ã³Ã·Ã Ã­Ã¨Ã¿: " << time;
         sales::putdata();
     }
 };
