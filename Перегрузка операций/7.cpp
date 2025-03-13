@@ -6,7 +6,7 @@ class fraction {
 private:
     int chis, zznam;
 
-    int gcd(int a, int b) {  // Нахождение НОД
+    int gcd(int a, int b) {  // ГЌГ ГµГ®Г¦Г¤ГҐГ­ГЁГҐ ГЌГЋГ„
         while (b != 0) {
             int temp = b;
             b = a % b;
@@ -24,21 +24,21 @@ private:
 public:
     fraction(int num = 0, int denom = 1) {
         if (denom == 0) {
-            cout << "Ошибка: деление на 0!" << endl;
+            cout << "ГЋГёГЁГЎГЄГ : Г¤ГҐГ«ГҐГ­ГЁГҐ Г­Г  0!" << endl;
             exit(1);
         }
         chis = num;
         zznam = denom;
-        lowterms();  // Приводим к несократимому виду сразу при инициализации
+        lowterms();  // ГЏГ°ГЁГўГ®Г¤ГЁГ¬ ГЄ Г­ГҐГ±Г®ГЄГ°Г ГІГЁГ¬Г®Г¬Гі ГўГЁГ¤Гі Г±Г°Г Г§Гі ГЇГ°ГЁ ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГЁ
     }
 
     void setFraction() {
-        cout << "Введите числитель: ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«ГЁГІГҐГ«Гј: ";
         cin >> chis;
-        cout << "Введите знаменатель: ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г§Г­Г Г¬ГҐГ­Г ГІГҐГ«Гј: ";
         cin >> zznam;
         if (zznam == 0) {
-            cout << "Ошибка: деление на 0!" << endl;
+            cout << "ГЋГёГЁГЎГЄГ : Г¤ГҐГ«ГҐГ­ГЁГҐ Г­Г  0!" << endl;
             exit(1);
         }
         lowterms();
@@ -74,7 +74,7 @@ public:
 
     fraction operator / (const fraction& f) const {
         if (f.chis == 0) {
-            cout << "Ошибка: деление на 0!" << endl;
+            cout << "ГЋГёГЁГЎГЄГ : Г¤ГҐГ«ГҐГ­ГЁГҐ Г­Г  0!" << endl;
             exit(1);
         }
         int num = chis * f.zznam;
@@ -103,45 +103,45 @@ int main() {
     f2.setFraction();
 
     do {
-        cout << "\nМеню калькулятора дробей:" << endl;
-        cout << "1. Сложение" << endl;
-        cout << "2. Вычитание" << endl;
-        cout << "3. Умножение" << endl;
-        cout << "4. Деление" << endl;
-        cout << "5. Выход" << endl;
-        cout << "Введите ваш выбор: ";
+        cout << "\nГЊГҐГ­Гѕ ГЄГ Г«ГјГЄГіГ«ГїГІГ®Г°Г  Г¤Г°Г®ГЎГҐГ©:" << endl;
+        cout << "1. Г‘Г«Г®Г¦ГҐГ­ГЁГҐ" << endl;
+        cout << "2. Г‚Г»Г·ГЁГІГ Г­ГЁГҐ" << endl;
+        cout << "3. Г“Г¬Г­Г®Г¦ГҐГ­ГЁГҐ" << endl;
+        cout << "4. Г„ГҐГ«ГҐГ­ГЁГҐ" << endl;
+        cout << "5. Г‚Г»ГµГ®Г¤" << endl;
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГўГ Гё ГўГ»ГЎГ®Г°: ";
         cin >> choice;
 
         switch (choice) {
         case 1:
             result = f1 + f2;
-            cout << "Результат сложения: ";
+            cout << "ГђГҐГ§ГіГ«ГјГІГ ГІ Г±Г«Г®Г¦ГҐГ­ГЁГї: ";
             result.display();
             cout << endl;
             break;
         case 2:
             result = f1 - f2;
-            cout << "Результат вычитания: ";
+            cout << "ГђГҐГ§ГіГ«ГјГІГ ГІ ГўГ»Г·ГЁГІГ Г­ГЁГї: ";
             result.display();
             cout << endl;
             break;
         case 3:
             result = f1 * f2;
-            cout << "Результат умножения: ";
+            cout << "ГђГҐГ§ГіГ«ГјГІГ ГІ ГіГ¬Г­Г®Г¦ГҐГ­ГЁГї: ";
             result.display();
             cout << endl;
             break;
         case 4:
             result = f1 / f2;
-            cout << "Результат деления: ";
+            cout << "ГђГҐГ§ГіГ«ГјГІГ ГІ Г¤ГҐГ«ГҐГ­ГЁГї: ";
             result.display();
             cout << endl;
             break;
         case 5:
-            cout << "Выход из программы..." << endl;
+            cout << "Г‚Г»ГµГ®Г¤ ГЁГ§ ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»..." << endl;
             break;
         default:
-            cout << "Неверный выбор, попробуйте снова." << endl;
+            cout << "ГЌГҐГўГҐГ°Г­Г»Г© ГўГ»ГЎГ®Г°, ГЇГ®ГЇГ°Г®ГЎГіГ©ГІГҐ Г±Г­Г®ГўГ ." << endl;
         }
 
     } while (choice != 5);
