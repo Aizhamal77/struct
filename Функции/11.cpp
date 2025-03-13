@@ -10,11 +10,11 @@ struct sterling {
 
 sterling getSterling() {
     sterling amount;
-    cout << "Ââåäèòå êîëè÷åñòâî ôóíòîâ: ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã´Ã³Ã­Ã²Ã®Ã¢: ";
     cin >> amount.pounds;
-    cout << "Ââåäèòå êîëè÷åñòâî øèëëèíãîâ: ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¸Ã¨Ã«Ã«Ã¨Ã­Ã£Ã®Ã¢: ";
     cin >> amount.shillings;
-    cout << "Ââåäèòå êîëè÷åñòâî ïåíñîâ: ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¯Ã¥Ã­Ã±Ã®Ã¢: ";
     cin >> amount.pence;
     return amount;
 }
@@ -34,21 +34,21 @@ sterling addSterling(const sterling& s1, const sterling& s2) {
 
 
 void printSterling(const sterling& amount) {
-    cout << amount.pounds << " ôóíòîâ, " << amount.shillings << " øèëëèíãîâ, " << amount.pence << " ïåíñîâ." << endl;
+    cout << amount.pounds << " Ã´Ã³Ã­Ã²Ã®Ã¢, " << amount.shillings << " Ã¸Ã¨Ã«Ã«Ã¨Ã­Ã£Ã®Ã¢, " << amount.pence << " Ã¯Ã¥Ã­Ã±Ã®Ã¢." << endl;
 }
 
 int main() {
     setlocale(LC_ALL, "Rus");
 
-    cout << "Ââåäèòå ïåğâóş äåíåæíóş ñóììó:" << endl;
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¯Ã¥Ã°Ã¢Ã³Ã¾ Ã¤Ã¥Ã­Ã¥Ã¦Ã­Ã³Ã¾ Ã±Ã³Ã¬Ã¬Ã³:" << endl;
     sterling s1 = getSterling();
 
-    cout << "Ââåäèòå âòîğóş äåíåæíóş ñóììó:" << endl;
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã²Ã®Ã°Ã³Ã¾ Ã¤Ã¥Ã­Ã¥Ã¦Ã­Ã³Ã¾ Ã±Ã³Ã¬Ã¬Ã³:" << endl;
     sterling s2 = getSterling();
 
     sterling result = addSterling(s1, s2);
 
-    cout << "Ğåçóëüòàò ñëîæåíèÿ: ";
+    cout << "ÃÃ¥Ã§Ã³Ã«Ã¼Ã²Ã Ã² Ã±Ã«Ã®Ã¦Ã¥Ã­Ã¨Ã¿: ";
     printSterling(result);
 
     return 0;
