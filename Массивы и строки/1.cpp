@@ -8,10 +8,10 @@ int main(){
     void reversit(char[]);  
     const int MAX = 80;         
     char str[MAX];            
-    cout << "\nÂâåäèòå ñòðîêó:";
+    cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã²Ã°Ã®ÃªÃ³:";
     cin.get(str, MAX);
     reversit(str);             
-    cout << "Ïåðåâåðíóòàÿ ñòðîêà:";
+    cout << "ÃÃ¥Ã°Ã¥Ã¢Ã¥Ã°Ã­Ã³Ã²Ã Ã¿ Ã±Ã²Ã°Ã®ÃªÃ :";
     cout << str << endl;
     return 0;
 }
