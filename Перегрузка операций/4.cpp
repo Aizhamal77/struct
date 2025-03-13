@@ -27,7 +27,7 @@ public:
 
     Int checkit(long double answer) const {
         if (answer > 2147483647.0L || answer < -2147483647.0L) {
-            cout << "\nÎøèáêà ïåðåïîëíåíèÿ\n";
+            cout << "\nÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã¥Ã°Ã¥Ã¯Ã®Ã«Ã­Ã¥Ã­Ã¨Ã¿\n";
             exit(1);
         }
         return Int(int(answer));
