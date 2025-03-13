@@ -13,7 +13,7 @@ private:
 public:
     void getDate() {
         char slash;
-        cout << "Ââåäèòå äàòó ïðèåìà íà ðàáîòó (MM/DD/YY): ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã²Ã³ Ã¯Ã°Ã¨Ã¥Ã¬Ã  Ã­Ã  Ã°Ã Ã¡Ã®Ã²Ã³ (MM/DD/YY): ";
         cin >> month >> slash >> day >> slash >> year;
     }
 
@@ -34,14 +34,14 @@ public:
 
     void getEmploy() {
         int typeChoice;
-        cout << "Ââåäèòå íîìåð ñîòðóäíèêà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
         cin >> empNumber;
-        cout << "Ââåäèòå îêëàä ñîòðóäíèêà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã®ÃªÃ«Ã Ã¤ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
         cin >> salary;
 
         hireDate.getDate(); 
 
-        cout << "Âûáåðèòå òèï ñîòðóäíèêà (0 - Ëàáîðàíò, 1 - Ñåêðåòàðü, 2 - Ìåíåäæåð, 3 - Èíæåíåð, 4 - Êëåðê): ";
+        cout << "Ã‚Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã²Ã¨Ã¯ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  (0 - Ã‹Ã Ã¡Ã®Ã°Ã Ã­Ã², 1 - Ã‘Ã¥ÃªÃ°Ã¥Ã²Ã Ã°Ã¼, 2 - ÃŒÃ¥Ã­Ã¥Ã¤Ã¦Ã¥Ã°, 3 - ÃˆÃ­Ã¦Ã¥Ã­Ã¥Ã°, 4 - ÃŠÃ«Ã¥Ã°Ãª): ";
         cin >> typeChoice;
 
         switch (typeChoice) {
@@ -55,19 +55,19 @@ public:
     }
 
     void putEmploy() const {
-        cout << "Íîìåð ñîòðóäíèêà: " << empNumber << endl;
-        cout << "Îêëàä ñîòðóäíèêà: " << salary << endl;
+        cout << "ÃÃ®Ã¬Ã¥Ã° Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : " << empNumber << endl;
+        cout << "ÃŽÃªÃ«Ã Ã¤ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : " << salary << endl;
 
-        cout << "Äàòà ïðèåìà íà ðàáîòó: ";
+        cout << "Ã„Ã Ã²Ã  Ã¯Ã°Ã¨Ã¥Ã¬Ã  Ã­Ã  Ã°Ã Ã¡Ã®Ã²Ã³: ";
         hireDate.showDate(); 
 
-        cout << "\nÒèï ñîòðóäíèêà: ";
+        cout << "\nÃ’Ã¨Ã¯ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
         switch (type) {
-        case LABORANT: cout << "Ëàáîðàíò"; break;
-        case SECRETARY: cout << "Ñåêðåòàðü"; break;
-        case MANAGER: cout << "Ìåíåäæåð"; break;
-        case ENGINEER: cout << "Èíæåíåð"; break;
-        case CLERK: cout << "Êëåðê"; break;
+        case LABORANT: cout << "Ã‹Ã Ã¡Ã®Ã°Ã Ã­Ã²"; break;
+        case SECRETARY: cout << "Ã‘Ã¥ÃªÃ°Ã¥Ã²Ã Ã°Ã¼"; break;
+        case MANAGER: cout << "ÃŒÃ¥Ã­Ã¥Ã¤Ã¦Ã¥Ã°"; break;
+        case ENGINEER: cout << "ÃˆÃ­Ã¦Ã¥Ã­Ã¥Ã°"; break;
+        case CLERK: cout << "ÃŠÃ«Ã¥Ã°Ãª"; break;
         }
         cout << endl;
     }
@@ -75,14 +75,14 @@ public:
 
 void inputEmployees(Employee* employees, int count) {
     for (int i = 0; i < count; i++) {
-        cout << "\nÂâåäèòå äàííûå äëÿ ñîòðóäíèêà " << i + 1 << ":\n";
+        cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã¤Ã«Ã¿ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  " << i + 1 << ":\n";
         employees[i].getEmploy();
     }
 }
 
 void displayEmployees(const Employee* employees, int count) {
     for (int i = 0; i < count; i++) {
-        cout << "\nÄàííûå ñîòðóäíèêà " << i + 1 << ":\n";
+        cout << "\nÃ„Ã Ã­Ã­Ã»Ã¥ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  " << i + 1 << ":\n";
         employees[i].putEmploy();
     }
 }
