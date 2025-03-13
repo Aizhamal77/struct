@@ -20,19 +20,19 @@ int main() {
 
     Time t1, t2;
 
-    cout << "Ââåäèòå ÷àñû, ìèíóòû è ñåêóíäû äëÿ ïåðâîãî âðåìåíè (t1): ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã Ã±Ã», Ã¬Ã¨Ã­Ã³Ã²Ã» Ã¨ Ã±Ã¥ÃªÃ³Ã­Ã¤Ã» Ã¤Ã«Ã¿ Ã¯Ã¥Ã°Ã¢Ã®Ã£Ã® Ã¢Ã°Ã¥Ã¬Ã¥Ã­Ã¨ (t1): ";
     cin >> t1.hours >> t1.minutes >> t1.seconds;
 
-    cout << "Ââåäèòå ÷àñû, ìèíóòû è ñåêóíäû äëÿ âòîðîãî âðåìåíè (t2): ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã Ã±Ã», Ã¬Ã¨Ã­Ã³Ã²Ã» Ã¨ Ã±Ã¥ÃªÃ³Ã­Ã¤Ã» Ã¤Ã«Ã¿ Ã¢Ã²Ã®Ã°Ã®Ã£Ã® Ã¢Ã°Ã¥Ã¬Ã¥Ã­Ã¨ (t2): ";
     cin >> t2.hours >> t2.minutes >> t2.seconds;
 
-    cout << "\nÄî îáìåíà:" << endl;
+    cout << "\nÃ„Ã® Ã®Ã¡Ã¬Ã¥Ã­Ã :" << endl;
     cout << "t1: " << t1.hours << ":" << t1.minutes << ":" << t1.seconds << endl;
     cout << "t2: " << t2.hours << ":" << t2.minutes << ":" << t2.seconds << endl;
 
     swap(t1, t2);
 
-    cout << "\nÏîñëå îáìåíà:" << endl;
+    cout << "\nÃÃ®Ã±Ã«Ã¥ Ã®Ã¡Ã¬Ã¥Ã­Ã :" << endl;
     cout << "t1: " << t1.hours << ":" << t1.minutes << ":" << t1.seconds << endl;
     cout << "t2: " << t2.hours << ":" << t2.minutes << ":" << t2.seconds << endl;
 
