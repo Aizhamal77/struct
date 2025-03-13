@@ -3,8 +3,8 @@ using namespace std;
 
 class Fraction {
 private:
-    int chis;   // Числитель
-    int znam; // Знаменатель
+    int chis;   // Г—ГЁГ±Г«ГЁГІГҐГ«Гј
+    int znam; // Г‡Г­Г Г¬ГҐГ­Г ГІГҐГ«Гј
 
 public:
     Fraction() : chis(0), znam(1) {}
@@ -12,12 +12,12 @@ public:
     Fraction(int num, int den) : chis(num), znam(den) {}
 
     void input() {
-        cout << "Введите числитель: ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«ГЁГІГҐГ«Гј: ";
         cin >> chis;
-        cout << "Введите знаменатель: ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г§Г­Г Г¬ГҐГ­Г ГІГҐГ«Гј: ";
         cin >> znam;
         while (znam == 0) {
-            cout << "Знаменатель не может быть равен 0. Введите снова: ";
+            cout << "Г‡Г­Г Г¬ГҐГ­Г ГІГҐГ«Гј Г­ГҐ Г¬Г®Г¦ГҐГІ ГЎГ»ГІГј Г°Г ГўГҐГ­ 0. Г‚ГўГҐГ¤ГЁГІГҐ Г±Г­Г®ГўГ : ";
             cin >> znam;
         }
     }
@@ -51,14 +51,14 @@ public:
 
 void inputFractions(Fraction* fractions, int n) {
     for (int i = 0; i < n; i++) {
-        cout << "Дробь " << i + 1 << ":\n";
+        cout << "Г„Г°Г®ГЎГј " << i + 1 << ":\n";
         fractions[i].input();
     }
 }
 
 void displayFractions(Fraction* fractions, int n) {
     for (int i = 0; i < n; i++) {
-        cout << "Дробь " << i + 1 << ": ";
+        cout << "Г„Г°Г®ГЎГј " << i + 1 << ": ";
         fractions[i].display();
         cout << endl;
     }
@@ -68,19 +68,19 @@ int main() {
     setlocale(LC_ALL, "Rus");
 
     int n;
-    cout << "Введите количество дробей: ";
+    cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г¤Г°Г®ГЎГҐГ©: ";
     cin >> n;
 
     Fraction* fractions = new Fraction[n];
 
     inputFractions(fractions, n);
 
-    cout << "\nДроби, которые вы ввели:\n";
+    cout << "\nГ„Г°Г®ГЎГЁ, ГЄГ®ГІГ®Г°Г»ГҐ ГўГ» ГўГўГҐГ«ГЁ:\n";
     displayFractions(fractions, n);
 
     Fraction avg = Fraction::average(fractions, n);
 
-    cout << "\nСреднее значение дробей: ";
+    cout << "\nГ‘Г°ГҐГ¤Г­ГҐГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ Г¤Г°Г®ГЎГҐГ©: ";
     avg.display();
     cout << endl;
 
