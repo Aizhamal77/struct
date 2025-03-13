@@ -7,8 +7,8 @@ using namespace std;
 
 class Card {
 public:
-    string suit;  // Масть
-    string rank;  // Старшинство
+    string suit;  // ГЊГ Г±ГІГј
+    string rank;  // Г‘ГІГ Г°ГёГЁГ­Г±ГІГўГ®
 
     Card(string s, string r) : suit(s), rank(r) {}
 
@@ -40,7 +40,7 @@ public:
 
     void dealCards() {
         for (int i = 0; i < 4; i++) {
-            cout << "Игрок " << i + 1 << " получает следующие карты:" << endl;
+            cout << "Г€ГЈГ°Г®ГЄ " << i + 1 << " ГЇГ®Г«ГіГ·Г ГҐГІ Г±Г«ГҐГ¤ГіГѕГ№ГЁГҐ ГЄГ Г°ГІГ»:" << endl;
             for (int j = 0; j < 13; j++) {
                 int index = i * 13 + j;
                 deck[index].display();
