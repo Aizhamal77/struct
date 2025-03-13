@@ -12,7 +12,7 @@ private:
 public:
     SafeArray(int lowerIndex, int upperIndex) {
         if (upperIndex - lowerIndex + 1 > SIZE) {
-            throw out_of_range("Размер массива превышает допустимый предел.");
+            throw out_of_range("ГђГ Г§Г¬ГҐГ° Г¬Г Г±Г±ГЁГўГ  ГЇГ°ГҐГўГ»ГёГ ГҐГІ Г¤Г®ГЇГіГ±ГІГЁГ¬Г»Г© ГЇГ°ГҐГ¤ГҐГ«.");
         }
         lower = lowerIndex;
         upper = upperIndex;
@@ -23,7 +23,7 @@ public:
 
     int& operator[](int index) {
         if (index < lower || index > upper) {
-            throw out_of_range("Индекс выходит за пределы массива.");
+            throw out_of_range("Г€Г­Г¤ГҐГЄГ± ГўГ»ГµГ®Г¤ГЁГІ Г§Г  ГЇГ°ГҐГ¤ГҐГ«Г» Г¬Г Г±Г±ГЁГўГ .");
         }
         return arr[index - lower];
     }
@@ -50,7 +50,7 @@ int main() {
 
     }
     catch (const out_of_range& e) {
-        cout << "Ошибка: " << e.what() << endl;
+        cout << "ГЋГёГЁГЎГЄГ : " << e.what() << endl;
     }
 
     return 0;
