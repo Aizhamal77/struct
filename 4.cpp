@@ -1,0 +1,133 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class publication {
+private:
+    string title;
+    float price;
+
+public:
+    void getdata() {
+        cout << "\nВведите заголовок: ";
+        cin >> title;
+        cout << "Введите цену: ";
+        cin >> price;
+    }
+
+    void putdata() const {
+        cout << "\nЗаголовок: " << title;
+        cout << "\nЦена: " << price;
+    }
+};
+
+class sales {
+private:
+    enum { MONTHS = 3 };
+    float salesArr[MONTHS];
+
+public:
+    void getdata() {
+        cout << "Введите объем продаж за 3 месяца:\n ";
+        for (int j = 0; j < MONTHS; j++) {
+            cout << " Месяц " << j + 1 << ": ";
+            cin >> salesArr[j];
+        }
+    }
+
+    void putdata() const {
+        for (int j = 0; j < MONTHS; j++) {
+            cout << "\nПродажи за месяц " << j + 1 << ": " << salesArr[j];
+        }
+    }
+};
+
+class book : private publication, private sales {
+private:
+    int pages;
+
+public:
+    void getdata() {
+        publication::getdata();
+        cout << "Введите число страниц: ";
+        cin >> pages;
+        sales::getdata();
+    }
+
+    void putdata() const {
+        publication::putdata();
+        cout << "\nСтраниц: " << pages;
+        sales::putdata();
+    }
+};
+
+class tape : private publication, private sales {
+private:
+    float time;
+
+public:
+    void getdata() {
+        publication::getdata();
+        cout << "Введите время звучания: ";
+        cin >> time;
+        sales::getdata();
+    }
+
+    void putdata() const {
+        publication::putdata();
+        cout << "\nВремя звучания: " << time;
+        sales::putdata();
+    }
+};
+
+// Добавление класса disk
+class disk : private publication, private sales {
+private:
+    enum disk_type { CD, DVD };
+    disk_type type;
+
+public:
+    void getdata() {
+        publication::getdata();
+        cout << "Введите тип диска (с - CD, d - DVD): ";
+        char choice;
+        cin >> choice;
+        if (choice == 'c' || choice == 'C') {
+            type = CD;
+        }
+        else if (choice == 'd' || choice == 'D') {
+            type = DVD;
+        }
+        else {
+            cout << "Неверный выбор. Установлен тип CD по умолчанию.\n";
+            type = CD;
+        }
+        sales::getdata();
+    }
+
+    void putdata() const {
+        publication::putdata();
+        cout << "\nТип диска: " << (type == CD ? "CD" : "DVD");
+        sales::putdata();
+    }
+};
+
+int main() {
+    setlocale(LC_ALL, "Rus");
+
+    book book1;
+    tape tape1;
+    disk disk1;
+
+    book1.getdata();
+    tape1.getdata();
+    disk1.getdata();
+
+    book1.putdata();
+    tape1.putdata();
+    disk1.putdata();
+
+    cout << endl;
+
+    return 0;
+}
