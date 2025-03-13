@@ -9,19 +9,19 @@ int main(){
 	double number, answer;
 	int pow;
 	char yeserno;
-	cout << "\nÂâåäèòå ÷èñëî:";
+	cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã®:";
 	cin >> number;
-	cout << "Áóäåòå ââîäèòü ñòåïåíü (y/n)?";
+	cout << "ÃÃ³Ã¤Ã¥Ã²Ã¥ Ã¢Ã¢Ã®Ã¤Ã¨Ã²Ã¼ Ã±Ã²Ã¥Ã¯Ã¥Ã­Ã¼ (y/n)?";
 	cin >> yeserno;
 	if (yeserno == 'y'){
 
-		cout << "Ââåäèòå ñòåïåíü:";
+		cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã²Ã¥Ã¯Ã¥Ã­Ã¼:";
 		cin >> pow;
 		answer = power(number, pow);
 	}
 	else
 		answer = power(number);
-	cout << "Îòâåò " << answer << endl;
+	cout << "ÃÃ²Ã¢Ã¥Ã² " << answer << endl;
 	return 0;
 }
 
