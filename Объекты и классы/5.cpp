@@ -14,12 +14,12 @@ public:
    
     void getDate() {
         char slash;  
-        cout << "Ââåäèòå äàòó â ôîðìàòå MM/DD/YY: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã²Ã³ Ã¢ Ã´Ã®Ã°Ã¬Ã Ã²Ã¥ MM/DD/YY: ";
         cin >> month >> slash >> day >> slash >> year;
     }
 
     void showDate() const {
-        cout << "Äàòà: " << month << "/" << day << "/" << year << endl;
+        cout << "Ã„Ã Ã²Ã : " << month << "/" << day << "/" << year << endl;
     }
 };
 
