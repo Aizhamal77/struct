@@ -14,17 +14,17 @@ int main(){
 
 	Distance d1, d2, d3; 
 	
-		cout << "\nÂâåäèòå ÷èñëî ôóòîâ:"; cin >> d1.feet;
-	cout << "Ââåäèòå ÷èñëî äşéìîâ:"; cin >> d1.inches;
+		cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã´Ã³Ã²Ã®Ã¢:"; cin >> d1.feet;
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã¤Ã¾Ã©Ã¬Ã®Ã¢:"; cin >> d1.inches;
 
 	
-		cout << "\nÂâåäèòå ÷èñëî ôóòîâ:"; cin >> d2.feet;
-	cout << "Ââåäèòå ÷èñëî äşéìîâ:"; cin >> d2.inches;
+		cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã´Ã³Ã²Ã®Ã¢:"; cin >> d2.feet;
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã¤Ã¾Ã©Ã¬Ã®Ã¢:"; cin >> d2.inches;
 	d3 = bigengl(d1, d2); 
 
 	cout << "\nd1="; engldisp(d1);
 	cout << "\nd2="; engldisp(d2);
-	cout << "\níàèáîëüøåå — "; engldisp(d3); cout << endl;
+	cout << "\nÃ­Ã Ã¨Ã¡Ã®Ã«Ã¼Ã¸Ã¥Ã¥ â€” "; engldisp(d3); cout << endl;
 	return 0;
 }
 
