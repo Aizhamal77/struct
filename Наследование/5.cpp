@@ -9,15 +9,15 @@ protected:
 
 public:
     void getdata() {
-        cout << "\nÂâåäèòå èìÿ: ";
+        cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¨Ã¬Ã¿: ";
         cin >> name;
-        cout << "Ââåäèòå íîìåð ñîòðóäíèêà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
         cin >> number;
     }
 
     void putdata() const {
-        cout << "\nÈìÿ: " << name;
-        cout << "\nÍîìåð: " << number;
+        cout << "\nÃˆÃ¬Ã¿: " << name;
+        cout << "\nÃÃ®Ã¬Ã¥Ã°: " << number;
     }
 };
 
@@ -31,10 +31,10 @@ protected:
 public:
     void getdata() {
         employee::getdata();
-        cout << "Ââåäèòå êîìïåíñàöèþ: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã¬Ã¯Ã¥Ã­Ã±Ã Ã¶Ã¨Ã¾: ";
         cin >> compensation;
         char p;
-        cout << "Ââåäèòå ïåðèîä îïëàòû (h - ïî÷àñîâàÿ, w - ïîíåäåëüíàÿ, m - ïîìåñÿ÷íàÿ): ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¯Ã¥Ã°Ã¨Ã®Ã¤ Ã®Ã¯Ã«Ã Ã²Ã» (h - Ã¯Ã®Ã·Ã Ã±Ã®Ã¢Ã Ã¿, w - Ã¯Ã®Ã­Ã¥Ã¤Ã¥Ã«Ã¼Ã­Ã Ã¿, m - Ã¯Ã®Ã¬Ã¥Ã±Ã¿Ã·Ã­Ã Ã¿): ";
         cin >> p;
         if (p == 'h' || p == 'H') {
             period = Hourly;
@@ -46,23 +46,23 @@ public:
             period = Monthly;
         }
         else {
-            cout << "Íåâåðíûé âûáîð. Óñòàíîâëåí ïåðèîä îïëàòû ïî óìîë÷àíèþ - ïî÷àñîâîé.\n";
+            cout << "ÃÃ¥Ã¢Ã¥Ã°Ã­Ã»Ã© Ã¢Ã»Ã¡Ã®Ã°. Ã“Ã±Ã²Ã Ã­Ã®Ã¢Ã«Ã¥Ã­ Ã¯Ã¥Ã°Ã¨Ã®Ã¤ Ã®Ã¯Ã«Ã Ã²Ã» Ã¯Ã® Ã³Ã¬Ã®Ã«Ã·Ã Ã­Ã¨Ã¾ - Ã¯Ã®Ã·Ã Ã±Ã®Ã¢Ã®Ã©.\n";
             period = Hourly;
         }
     }
 
     void putdata() const {
         employee::putdata();
-        cout << "\nÊîìïåíñàöèÿ: " << compensation;
-        cout << "\nÏåðèîä îïëàòû: ";
+        cout << "\nÃŠÃ®Ã¬Ã¯Ã¥Ã­Ã±Ã Ã¶Ã¨Ã¿: " << compensation;
+        cout << "\nÃÃ¥Ã°Ã¨Ã®Ã¤ Ã®Ã¯Ã«Ã Ã²Ã»: ";
         if (period == Hourly) {
-            cout << "Ïî÷àñîâàÿ";
+            cout << "ÃÃ®Ã·Ã Ã±Ã®Ã¢Ã Ã¿";
         }
         else if (period == Weekly) {
-            cout << "Ïîíåäåëüíàÿ";
+            cout << "ÃÃ®Ã­Ã¥Ã¤Ã¥Ã«Ã¼Ã­Ã Ã¿";
         }
         else if (period == Monthly) {
-            cout << "Ïîìåñÿ÷íàÿ";
+            cout << "ÃÃ®Ã¬Ã¥Ã±Ã¿Ã·Ã­Ã Ã¿";
         }
     }
 };
@@ -74,13 +74,13 @@ private:
 public:
     void getdata() {
         employee2::getdata();
-        cout << "Ââåäèòå äîëæíîñòü ðàáî÷åãî: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã®Ã«Ã¦Ã­Ã®Ã±Ã²Ã¼ Ã°Ã Ã¡Ã®Ã·Ã¥Ã£Ã®: ";
         cin >> jobTitle;
     }
 
     void putdata() const {
         employee2::putdata();
-        cout << "\nÄîëæíîñòü ðàáî÷åãî: " << jobTitle;
+        cout << "\nÃ„Ã®Ã«Ã¦Ã­Ã®Ã±Ã²Ã¼ Ã°Ã Ã¡Ã®Ã·Ã¥Ã£Ã®: " << jobTitle;
     }
 };
 
@@ -91,13 +91,13 @@ private:
 public:
     void getdata() {
         employee2::getdata();
-        cout << "Ââåäèòå äåïàðòàìåíò ìåíåäæåðà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã¥Ã¯Ã Ã°Ã²Ã Ã¬Ã¥Ã­Ã² Ã¬Ã¥Ã­Ã¥Ã¤Ã¦Ã¥Ã°Ã : ";
         cin >> department;
     }
 
     void putdata() const {
         employee2::putdata();
-        cout << "\nÄåïàðòàìåíò ìåíåäæåðà: " << department;
+        cout << "\nÃ„Ã¥Ã¯Ã Ã°Ã²Ã Ã¬Ã¥Ã­Ã² Ã¬Ã¥Ã­Ã¥Ã¤Ã¦Ã¥Ã°Ã : " << department;
     }
 };
 
@@ -108,13 +108,13 @@ private:
 public:
     void getdata() {
         employee2::getdata();
-        cout << "Ââåäèòå îáëàñòü èññëåäîâàíèé ó÷åíîãî: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã®Ã¡Ã«Ã Ã±Ã²Ã¼ Ã¨Ã±Ã±Ã«Ã¥Ã¤Ã®Ã¢Ã Ã­Ã¨Ã© Ã³Ã·Ã¥Ã­Ã®Ã£Ã®: ";
         cin >> researchField;
     }
 
     void putdata() const {
         employee2::putdata();
-        cout << "\nÎáëàñòü èññëåäîâàíèé: " << researchField;
+        cout << "\nÃŽÃ¡Ã«Ã Ã±Ã²Ã¼ Ã¨Ã±Ã±Ã«Ã¥Ã¤Ã®Ã¢Ã Ã­Ã¨Ã©: " << researchField;
     }
 };
 
@@ -125,15 +125,15 @@ int main() {
     manager2 manager;
     scientist2 scientist;
 
-    cout << "\nÄàííûå ðàáî÷åãî:\n";
+    cout << "\nÃ„Ã Ã­Ã­Ã»Ã¥ Ã°Ã Ã¡Ã®Ã·Ã¥Ã£Ã®:\n";
     laborer.getdata();
     laborer.putdata();
 
-    cout << "\n\nÄàííûå ìåíåäæåðà:\n";
+    cout << "\n\nÃ„Ã Ã­Ã­Ã»Ã¥ Ã¬Ã¥Ã­Ã¥Ã¤Ã¦Ã¥Ã°Ã :\n";
     manager.getdata();
     manager.putdata();
 
-    cout << "\n\nÄàííûå ó÷åíîãî:\n";
+    cout << "\n\nÃ„Ã Ã­Ã­Ã»Ã¥ Ã³Ã·Ã¥Ã­Ã®Ã£Ã®:\n";
     scientist.getdata();
     scientist.putdata();
 
