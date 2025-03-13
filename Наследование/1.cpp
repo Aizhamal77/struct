@@ -9,16 +9,16 @@ private:
 
 public:
     void getdata() {
-        cout << "\nÂâåäèòå çàãîëîâîê: ";
+        cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã§Ã Ã£Ã®Ã«Ã®Ã¢Ã®Ãª: ";
         getline(cin, title);  
-        cout << "Ââåäèòå öåíó: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¶Ã¥Ã­Ã³: ";
         cin >> price;
         cin.ignore(); 
     }
 
     void putdata() const {
-        cout << "\nÇàãîëîâîê: " << title;
-        cout << "\nÖåíà: " << price;
+        cout << "\nÃ‡Ã Ã£Ã®Ã«Ã®Ã¢Ã®Ãª: " << title;
+        cout << "\nÃ–Ã¥Ã­Ã : " << price;
     }
 };
 
@@ -29,14 +29,14 @@ private:
 public:
     void getdata() {
         Publication::getdata();
-        cout << "Ââåäèòå ÷èñëî ñòðàíèö: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã±Ã²Ã°Ã Ã­Ã¨Ã¶: ";
         cin >> pages;
         cin.ignore(); 
     }
 
     void putdata() const {
         Publication::putdata();
-        cout << "\nÑòðàíèö: " << pages;
+        cout << "\nÃ‘Ã²Ã°Ã Ã­Ã¨Ã¶: " << pages;
     }
 };
 
@@ -47,14 +47,14 @@ private:
 public:
     void getdata() {
         Publication::getdata();
-        cout << "Ââåäèòå âðåìÿ çâó÷àíèÿ: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã°Ã¥Ã¬Ã¿ Ã§Ã¢Ã³Ã·Ã Ã­Ã¨Ã¿: ";
         cin >> time;
         cin.ignore(); 
     }
 
     void putdata() const {
         Publication::putdata();
-        cout << "\nÂðåìÿ çâó÷àíèÿ: " << time;
+        cout << "\nÃ‚Ã°Ã¥Ã¬Ã¿ Ã§Ã¢Ã³Ã·Ã Ã­Ã¨Ã¿: " << time;
     }
 };
 
@@ -64,16 +64,16 @@ int main() {
     Book book1;  
     Tape tape1;
 
-    cout << "Ââåäèòå äàííûå äëÿ êíèãè:\n";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã¤Ã«Ã¿ ÃªÃ­Ã¨Ã£Ã¨:\n";
     book1.getdata(); 
 
-    cout << "\nÂâåäèòå äàííûå äëÿ àóäèîêàññåòû:\n";
+    cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã¤Ã«Ã¿ Ã Ã³Ã¤Ã¨Ã®ÃªÃ Ã±Ã±Ã¥Ã²Ã»:\n";
     tape1.getdata();   
 
-    cout << "\nÄàííûå î êíèãå:\n";
+    cout << "\nÃ„Ã Ã­Ã­Ã»Ã¥ Ã® ÃªÃ­Ã¨Ã£Ã¥:\n";
     book1.putdata();   
 
-    cout << "\nÄàííûå îá àóäèîêàññåòå:\n";
+    cout << "\nÃ„Ã Ã­Ã­Ã»Ã¥ Ã®Ã¡ Ã Ã³Ã¤Ã¨Ã®ÃªÃ Ã±Ã±Ã¥Ã²Ã¥:\n";
     tape1.putdata();   
 
     return 0;
