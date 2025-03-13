@@ -23,10 +23,10 @@ Time secs_to_time(long total_seconds) {
 int main() {
     Time t1, t2, result;
 
-    cout << "Ââåäèòå âðåìÿ 1 (÷àñû ìèíóòû ñåêóíäû): ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã°Ã¥Ã¬Ã¿ 1 (Ã·Ã Ã±Ã» Ã¬Ã¨Ã­Ã³Ã²Ã» Ã±Ã¥ÃªÃ³Ã­Ã¤Ã»): ";
     cin >> t1.hours >> t1.minutes >> t1.seconds;
 
-    cout << "Ââåäèòå âðåìÿ 2 (÷àñû ìèíóòû ñåêóíäû): ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã°Ã¥Ã¬Ã¿ 2 (Ã·Ã Ã±Ã» Ã¬Ã¨Ã­Ã³Ã²Ã» Ã±Ã¥ÃªÃ³Ã­Ã¤Ã»): ";
     cin >> t2.hours >> t2.minutes >> t2.seconds;
 
     long secs1 = time_to_secs(t1);
@@ -35,7 +35,7 @@ int main() {
 
     result = secs_to_time(total_secs);
 
-    cout << "Ðåçóëüòàò (÷àñû:ìèíóòû:ñåêóíäû): "
+    cout << "ÃÃ¥Ã§Ã³Ã«Ã¼Ã²Ã Ã² (Ã·Ã Ã±Ã»:Ã¬Ã¨Ã­Ã³Ã²Ã»:Ã±Ã¥ÃªÃ³Ã­Ã¤Ã»): "
         << result.hours << ":"
         << result.minutes << ":"
         << result.seconds << endl;
