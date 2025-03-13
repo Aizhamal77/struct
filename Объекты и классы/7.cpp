@@ -11,11 +11,11 @@ public:
     Angle(int deg, float min, char dir) : degrees(deg), minutes(min), direction(dir) {}
 
     void input() {
-        cout << "Ââåäèòå ãðàäóñû: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã£Ã°Ã Ã¤Ã³Ã±Ã»: ";
         cin >> degrees;
-        cout << "Ââåäèòå ìèíóòû: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¬Ã¨Ã­Ã³Ã²Ã»: ";
         cin >> minutes;
-        cout << "Ââåäèòå íàïðàâëåíèå (N, S, E, W): ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã Ã¯Ã°Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ (N, S, E, W): ";
         cin >> direction;
     }
 
@@ -36,18 +36,18 @@ int main() {
     setlocale(LC_ALL, "Rus");
 
     Angle coordinate(149, 34.8, 'E');
-    cout << "Êîîðäèíàòû áóõòû Ïàïèòè íà î. Òàèòè: ";
+    cout << "ÃŠÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã» Ã¡Ã³ÃµÃ²Ã» ÃÃ Ã¯Ã¨Ã²Ã¨ Ã­Ã  Ã®. Ã’Ã Ã¨Ã²Ã¨: ";
     coordinate.display();
 
     Angle userCoordinate(0, 0.0, 'N'); 
 
     while (true) {
-        cout << "\nÂâåäèòå êîîðäèíàòó (èëè ââåäèòå 0 äëÿ âûõîäà):" << endl;
+        cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã³ (Ã¨Ã«Ã¨ Ã¢Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ 0 Ã¤Ã«Ã¿ Ã¢Ã»ÃµÃ®Ã¤Ã ):" << endl;
         userCoordinate.input();
         if (userCoordinate.getDegrees() == 0 && userCoordinate.getMinutes() == 0.0) {
             break;
         }
-        cout << "Ââåäåííàÿ êîîðäèíàòà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¥Ã­Ã­Ã Ã¿ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã : ";
         userCoordinate.display();
     }
 
