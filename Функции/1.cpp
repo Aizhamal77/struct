@@ -7,10 +7,10 @@ int main(){
 	setlocale(LC_ALL, "Rus");
 
 	double rad;
-	cout << "\nÂâåäèòå ðàäèóñ îêðóæíîñòè:";
+	cout << "\nÃ‚Ã¢ÄºÃ¤ÄÅˆÄº Ä‘Å•Ã¤ÄÃ³Å„ Ã®Ä™Ä‘Ã³Ä‡Ã­Ã®Å„ÅˆÄ:";
 	
 		cin >> rad;
-	cout << "Ïëîùàäü ðàâíà " << circarea(rad) << endl;
+	cout << "ÄŽÃ«Ã®Å¯Å•Ã¤Ã¼ Ä‘Å•Ã¢Ã­Å• " << circarea(rad) << endl;
 	return 0;
 }
 
