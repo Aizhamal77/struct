@@ -6,7 +6,7 @@ int call_count = 0;
 
 void count_calls() {
     call_count++;
-    cout << "Ôóíêöèÿ áûëà âûçâàíà " << call_count << " ðàç(à)." << endl;
+    cout << "Ã”Ã³Ã­ÃªÃ¶Ã¨Ã¿ Ã¡Ã»Ã«Ã  Ã¢Ã»Ã§Ã¢Ã Ã­Ã  " << call_count << " Ã°Ã Ã§(Ã )." << endl;
 }
 
 int main() {
