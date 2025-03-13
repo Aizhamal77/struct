@@ -12,15 +12,15 @@ public:
 
     void input() {
         char slash; 
-        cout << "Ââåäèòå ãğàäóñû: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã£Ã°Ã Ã¤Ã³Ã±Ã»: ";
         cin >> degrees;
-        cout << "Ââåäèòå ìèíóòû: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¬Ã¨Ã­Ã³Ã²Ã»: ";
         cin >> minutes;
-        cout << "Ââåäèòå íàïğàâëåíèå (N, S, E, W): ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã Ã¯Ã°Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ (N, S, E, W): ";
         cin >> direction;
 
         if (minutes < 0 || minutes >= 60) {
-            cout << "Îøèáêà! Ìèíóòû äîëæíû áûòü â äèàïàçîíå îò 0 äî 59." << endl;
+            cout << "ÃÃ¸Ã¨Ã¡ÃªÃ ! ÃŒÃ¨Ã­Ã³Ã²Ã» Ã¤Ã®Ã«Ã¦Ã­Ã» Ã¡Ã»Ã²Ã¼ Ã¢ Ã¤Ã¨Ã Ã¯Ã Ã§Ã®Ã­Ã¥ Ã®Ã² 0 Ã¤Ã® 59." << endl;
             minutes = 0.0;
         }
     }
@@ -46,18 +46,18 @@ public:
 
  
     void input() {
-        cout << "\nÊîğàáëü #" << shipNumber << endl;
-        cout << "Ââåäèòå äàííûå î øèğîòå: ";
+        cout << "\nÃŠÃ®Ã°Ã Ã¡Ã«Ã¼ #" << shipNumber << endl;
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã® Ã¸Ã¨Ã°Ã®Ã²Ã¥: ";
         latitude.input();
-        cout << "Ââåäèòå äàííûå î äîëãîòå: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã® Ã¤Ã®Ã«Ã£Ã®Ã²Ã¥: ";
         longitude.input();
     }
 
     void display() const {
-        cout << "Êîğàáëü #" << shipNumber << endl;
-        cout << "Øèğîòà: ";
+        cout << "ÃŠÃ®Ã°Ã Ã¡Ã«Ã¼ #" << shipNumber << endl;
+        cout << "Ã˜Ã¨Ã°Ã®Ã²Ã : ";
         latitude.display();
-        cout << "\nÄîëãîòà: ";
+        cout << "\nÃ„Ã®Ã«Ã£Ã®Ã²Ã : ";
         longitude.display();
         cout << endl;
     }
