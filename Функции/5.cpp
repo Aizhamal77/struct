@@ -11,10 +11,10 @@ int main() {
 
     int hours, minutes, seconds;
 
-    cout << "Ââåäèòå âğåìÿ (÷àñû ìèíóòû ñåêóíäû): ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã°Ã¥Ã¬Ã¿ (Ã·Ã Ã±Ã» Ã¬Ã¨Ã­Ã³Ã²Ã» Ã±Ã¥ÃªÃ³Ã­Ã¤Ã»): ";
     cin >> hours >> minutes >> seconds;
 
-    cout << "Îáùåå êîëè÷åñòâî ñåêóíä: " << hms_to_secs(hours, minutes, seconds) << endl;
+    cout << "ÃÃ¡Ã¹Ã¥Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã±Ã¥ÃªÃ³Ã­Ã¤: " << hms_to_secs(hours, minutes, seconds) << endl;
 
     return 0;
 }
