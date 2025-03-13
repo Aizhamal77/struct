@@ -15,20 +15,20 @@ int main() {
     setlocale(LC_ALL, "Rus");
 
     int n;
-    cout << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ: ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢: ";
     cin >> n;
 
     int* arr = new int[n];
 
     for (int i = 0; i < n; i++) {
-        cout << "Ââåäèòå ýëåìåíò " << i + 1 << ": ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã² " << i + 1 << ": ";
         cin >> arr[i];
     }
 
     int maxIndex = maxint(arr, n);
 
-    cout << "Íàèáîëüøåå ÷èñëî: " << arr[maxIndex] << endl;
-    cout << "Èíäåêñ íàèáîëüøåãî ÷èñëà: " << maxIndex << endl;
+    cout << "ÃÃ Ã¨Ã¡Ã®Ã«Ã¼Ã¸Ã¥Ã¥ Ã·Ã¨Ã±Ã«Ã®: " << arr[maxIndex] << endl;
+    cout << "ÃˆÃ­Ã¤Ã¥ÃªÃ± Ã­Ã Ã¨Ã¡Ã®Ã«Ã¼Ã¸Ã¥Ã£Ã® Ã·Ã¨Ã±Ã«Ã : " << maxIndex << endl;
 
     delete[] arr;
     return 0;
