@@ -12,9 +12,9 @@ public:
     Distance(int ft, float in) : feet(ft), inches(in) {}
 
     void getdist() {
-        cout << "\nÂâåäèòå ÷èñëî ôóòîâ: ";
+        cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã´Ã³Ã²Ã®Ã¢: ";
         cin >> feet;
-        cout << "×èñëî äşéìîâ: ";
+        cout << "Ã—Ã¨Ã±Ã«Ã® Ã¤Ã¾Ã©Ã¬Ã®Ã¢: ";
         cin >> inches;
     }
 
