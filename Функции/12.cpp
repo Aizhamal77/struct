@@ -49,34 +49,34 @@ int main() {
     fraction f1, f2;
 
 
-    cout << "Ââåäèòå ïåðâóþ äðîáü (÷èñëèòåëü è çíàìåíàòåëü): ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¯Ã¥Ã°Ã¢Ã³Ã¾ Ã¤Ã°Ã®Ã¡Ã¼ (Ã·Ã¨Ã±Ã«Ã¨Ã²Ã¥Ã«Ã¼ Ã¨ Ã§Ã­Ã Ã¬Ã¥Ã­Ã Ã²Ã¥Ã«Ã¼): ";
     cin >> f1.numerator >> f1.denominator;
 
-    cout << "Ââåäèòå âòîðóþ äðîáü (÷èñëèòåëü è çíàìåíàòåëü): ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã²Ã®Ã°Ã³Ã¾ Ã¤Ã°Ã®Ã¡Ã¼ (Ã·Ã¨Ã±Ã«Ã¨Ã²Ã¥Ã«Ã¼ Ã¨ Ã§Ã­Ã Ã¬Ã¥Ã­Ã Ã²Ã¥Ã«Ã¼): ";
     cin >> f2.numerator >> f2.denominator;
 
     fraction sum = fadd(f1, f2);
-    cout << "Ñóììà: ";
+    cout << "Ã‘Ã³Ã¬Ã¬Ã : ";
     printFraction(sum);
 
   
     fraction diff = fsub(f1, f2);
-    cout << "Ðàçíîñòü: ";
+    cout << "ÃÃ Ã§Ã­Ã®Ã±Ã²Ã¼: ";
     printFraction(diff);
 
 
     fraction product = fmul(f1, f2);
-    cout << "Ïðîèçâåäåíèå: ";
+    cout << "ÃÃ°Ã®Ã¨Ã§Ã¢Ã¥Ã¤Ã¥Ã­Ã¨Ã¥: ";
     printFraction(product);
 
   
     if (f2.numerator != 0) {
         fraction quotient = fdiv(f1, f2);
-        cout << "×àñòíîå: ";
+        cout << "Ã—Ã Ã±Ã²Ã­Ã®Ã¥: ";
         printFraction(quotient);
     }
     else {
-        cout << "Îøèáêà! Äåëåíèå íà íîëü." << endl;
+        cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ ! Ã„Ã¥Ã«Ã¥Ã­Ã¨Ã¥ Ã­Ã  Ã­Ã®Ã«Ã¼." << endl;
     }
 
     return 0;
