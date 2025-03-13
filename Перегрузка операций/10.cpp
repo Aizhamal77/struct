@@ -2,7 +2,7 @@
 #include <cmath>  
 using namespace std;
 
-#define M_PI 3.14159265358979323846  // Определяем M_PI вручную
+#define M_PI 3.14159265358979323846  // ГЋГЇГ°ГҐГ¤ГҐГ«ГїГҐГ¬ M_PI ГўГ°ГіГ·Г­ГіГѕ
 
 class Polar {
 private:
@@ -46,7 +46,7 @@ int main() {
     p1.display();
     cout << "p2: ";
     p2.display();
-    cout << "p3 (результат сложения p1 и p2): ";
+    cout << "p3 (Г°ГҐГ§ГіГ«ГјГІГ ГІ Г±Г«Г®Г¦ГҐГ­ГЁГї p1 ГЁ p2): ";
     p3.display();
 
     return 0;
