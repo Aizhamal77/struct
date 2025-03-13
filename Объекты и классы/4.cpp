@@ -11,23 +11,23 @@ public:
     Employee() : empNumber(0), salary(0.0f) {}
 
     void inputData() {
-        cout << "Ââåäèòå íîìåð ñîòðóäíèêà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
         cin >> empNumber;
-        cout << "Ââåäèòå îêëàä ñîòðóäíèêà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã®ÃªÃ«Ã Ã¤ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
         cin >> salary;
     }
 
   
     void displayData() const {
-        cout << "Íîìåð ñîòðóäíèêà: " << empNumber << endl;
-        cout << "Îêëàä ñîòðóäíèêà: " << salary << endl;
+        cout << "ÃÃ®Ã¬Ã¥Ã° Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : " << empNumber << endl;
+        cout << "ÃŽÃªÃ«Ã Ã¤ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : " << salary << endl;
     }
 };
 
 
 void inputEmployees(Employee* emp, int count) {
     for (int i = 0; i < count; i++) {
-        cout << "Ââåäèòå äàííûå äëÿ ñîòðóäíèêà " << i + 1 << ":\n";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã¤Ã«Ã¿ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  " << i + 1 << ":\n";
         emp[i].inputData();
     }
 }
@@ -35,7 +35,7 @@ void inputEmployees(Employee* emp, int count) {
 
 void displayEmployees(const Employee* emp, int count) {
     for (int i = 0; i < count; i++) {
-        cout << "\nÄàííûå ñîòðóäíèêà " << i + 1 << ":\n";
+        cout << "\nÃ„Ã Ã­Ã­Ã»Ã¥ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  " << i + 1 << ":\n";
         emp[i].displayData();
     }
 }
