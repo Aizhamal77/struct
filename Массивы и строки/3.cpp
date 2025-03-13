@@ -13,8 +13,8 @@ public:
         feet = ft; inches = in;
     }
     void getdist() {
-        cout << "\nÂâåäèòå ôóòû:"; cin >> feet;
-        cout << "Ââåäèòå äþéìû:"; cin >> inches;
+        cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã´Ã³Ã²Ã»:"; cin >> feet;
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã¾Ã©Ã¬Ã»:"; cin >> inches;
     }
     void showdist() {
         cout << feet << "\'-" << inches << '\"';
@@ -52,15 +52,15 @@ int main(){
     int count = 0;     
     char ch;             
     do {
-        cout << "\nÂâåäèòå ðàññòîÿíèå "; 
+        cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã°Ã Ã±Ã±Ã²Ã®Ã¿Ã­Ã¨Ã¥ "; 
         distarr[count++].getdist();   
-        cout << "\nÏðîäîëæèòü (y/n)?";   
+        cout << "\nÃÃ°Ã®Ã¤Ã®Ã«Ã¦Ã¨Ã²Ã¼ (y/n)?";   
         cin >> ch;
     } while (ch != 'n');
     for (int j = 0; j < count; j++)  
         total.add_dist(total, distarr[j]); 
     average.div_dist(total, count);     
-    cout << "\nÑðåäíåå:";  
+    cout << "\nÃ‘Ã°Ã¥Ã¤Ã­Ã¥Ã¥:";  
     average.showdist();
     cout << endl;
     return 0;
