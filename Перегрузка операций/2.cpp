@@ -23,7 +23,7 @@ public:
 
     String operator +=(const String& ss) {
         if (strlen(str) + strlen(ss.str) >= SZ) {
-            cout << "\nÏåðåïîëíåíèå ñòðîêè";
+            cout << "\nÃÃ¥Ã°Ã¥Ã¯Ã®Ã«Ã­Ã¥Ã­Ã¨Ã¥ Ã±Ã²Ã°Ã®ÃªÃ¨";
             exit(1);
         }
         strcat_s(str, SZ, ss.str);
@@ -34,8 +34,8 @@ public:
 int main() {
     setlocale(LC_ALL, "Rus");
 
-    String s1("Ñ Íîâûì Ãîäîì!");
-    String s2("Óðà, òîâàðèùè!");
+    String s1("Ã‘ ÃÃ®Ã¢Ã»Ã¬ ÃƒÃ®Ã¤Ã®Ã¬!");
+    String s2("Ã“Ã°Ã , Ã²Ã®Ã¢Ã Ã°Ã¨Ã¹Ã¨!");
     String s3;
 
     s3 = s1 += s2;
