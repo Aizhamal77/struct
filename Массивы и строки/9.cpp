@@ -12,7 +12,7 @@ public:
 
     void put(int value) {
         if ((tail + 1) % MAX == head) {
-            cout << "Î÷åðåäü ïîëíà!" << endl;
+            cout << "ÃŽÃ·Ã¥Ã°Ã¥Ã¤Ã¼ Ã¯Ã®Ã«Ã­Ã !" << endl;
         }
         else {
             arr[tail] = value;
@@ -22,7 +22,7 @@ public:
 
     int get() {
         if (head == tail) {
-            cout << "Î÷åðåäü ïóñòà!" << endl;
+            cout << "ÃŽÃ·Ã¥Ã°Ã¥Ã¤Ã¼ Ã¯Ã³Ã±Ã²Ã !" << endl;
             return -1;
         }
         else {
@@ -34,7 +34,7 @@ public:
 
     void input() {
         int value;
-        cout << "Ââåäèòå ÷èñëî äëÿ äîáàâëåíèÿ â î÷åðåäü: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã¤Ã«Ã¿ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¿ Ã¢ Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¼: ";
         cin >> value;
         put(value);
     }
@@ -42,7 +42,7 @@ public:
     void output() {
         int value = get();
         if (value != -1) {
-            cout << "Èçâëå÷åííîå ÷èñëî: " << value << endl;
+            cout << "ÃˆÃ§Ã¢Ã«Ã¥Ã·Ã¥Ã­Ã­Ã®Ã¥ Ã·Ã¨Ã±Ã«Ã®: " << value << endl;
         }
     }
 };
@@ -54,9 +54,9 @@ int main() {
     char choice;
 
     do {
-        cout << "\n1. Äîáàâèòü ýëåìåíò â î÷åðåäü" << endl;
-        cout << "2. Èçâëå÷ü ýëåìåíò èç î÷åðåäè" << endl;
-        cout << "Âûáåðèòå äåéñòâèå (1 èëè 2): ";
+        cout << "\n1. Ã„Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã² Ã¢ Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¼" << endl;
+        cout << "2. ÃˆÃ§Ã¢Ã«Ã¥Ã·Ã¼ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã² Ã¨Ã§ Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨" << endl;
+        cout << "Ã‚Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã¤Ã¥Ã©Ã±Ã²Ã¢Ã¨Ã¥ (1 Ã¨Ã«Ã¨ 2): ";
         cin >> choice;
 
         if (choice == '1') {
@@ -66,10 +66,10 @@ int main() {
             q.output();
         }
         else {
-            cout << "Íåâåðíûé âûáîð!" << endl;
+            cout << "ÃÃ¥Ã¢Ã¥Ã°Ã­Ã»Ã© Ã¢Ã»Ã¡Ã®Ã°!" << endl;
         }
 
-        cout << "Ïðîäîëæèòü (y/n)? ";
+        cout << "ÃÃ°Ã®Ã¤Ã®Ã«Ã¦Ã¨Ã²Ã¼ (y/n)? ";
         cin >> choice;
 
     } while (choice == 'y');
