@@ -12,7 +12,7 @@ public:
     }
 
     void displaySerialNumber() const {
-        cout << "Ìîé ïîðÿäêîâûé íîìåð: " << serialNumber << endl;
+        cout << "ÃŒÃ®Ã© Ã¯Ã®Ã°Ã¿Ã¤ÃªÃ®Ã¢Ã»Ã© Ã­Ã®Ã¬Ã¥Ã°: " << serialNumber << endl;
     }
 
     static int getObjectCount() {
