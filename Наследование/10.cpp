@@ -11,14 +11,14 @@ public:
     Employee() : name(""), id("") {}
 
     void input() {
-        cout << "Ââåäèòå èìÿ ñîòðóäíèêà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¨Ã¬Ã¿ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
         cin >> name;
-        cout << "Ââåäèòå ID ñîòðóäíèêà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ID Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
         cin >> id;
     }
 
     void display() const {
-        cout << "Èìÿ: " << name << endl;
+        cout << "ÃˆÃ¬Ã¿: " << name << endl;
         cout << "ID: " << id << endl;
     }
 };
@@ -32,13 +32,13 @@ public:
 
     void input() {
         Employee::input();  
-        cout << "Ââåäèòå çàðïëàòó ìåíåäæåðà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã§Ã Ã°Ã¯Ã«Ã Ã²Ã³ Ã¬Ã¥Ã­Ã¥Ã¤Ã¦Ã¥Ã°Ã : ";
         cin >> salary;
     }
 
     void display() const {
         Employee::display(); 
-        cout << "Çàðïëàòà ìåíåäæåðà: " << salary << endl;
+        cout << "Ã‡Ã Ã°Ã¯Ã«Ã Ã²Ã  Ã¬Ã¥Ã­Ã¥Ã¤Ã¦Ã¥Ã°Ã : " << salary << endl;
     }
 };
 
@@ -52,16 +52,16 @@ public:
 
     void input() {
         Manager::input(); 
-        cout << "Ââåäèòå ðàçìåð ãîäîâîé ïðåìèè: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã°Ã Ã§Ã¬Ã¥Ã° Ã£Ã®Ã¤Ã®Ã¢Ã®Ã© Ã¯Ã°Ã¥Ã¬Ã¨Ã¨: ";
         cin >> bonus;
-        cout << "Ââåäèòå êîëè÷åñòâî àêöèé â êîìïàíèè: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã ÃªÃ¶Ã¨Ã© Ã¢ ÃªÃ®Ã¬Ã¯Ã Ã­Ã¨Ã¨: ";
         cin >> shares;
     }
 
     void display() const {
         Manager::display();  
-        cout << "Ðàçìåð ãîäîâîé ïðåìèè: " << bonus << endl;
-        cout << "Êîëè÷åñòâî àêöèé: " << shares << endl;
+        cout << "ÃÃ Ã§Ã¬Ã¥Ã° Ã£Ã®Ã¤Ã®Ã¢Ã®Ã© Ã¯Ã°Ã¥Ã¬Ã¨Ã¨: " << bonus << endl;
+        cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã ÃªÃ¶Ã¨Ã©: " << shares << endl;
     }
 };
 
@@ -69,10 +69,10 @@ int main() {
     setlocale(LC_ALL, "Rus");
     Executive exec;
 
-    cout << "Ââåäèòå äàííûå äëÿ óïðàâëÿþùåãî (executive):" << endl;
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã¤Ã«Ã¿ Ã³Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¾Ã¹Ã¥Ã£Ã® (executive):" << endl;
     exec.input();
 
-    cout << "\nÄàííûå î óïðàâëÿþùåì (executive):" << endl;
+    cout << "\nÃ„Ã Ã­Ã­Ã»Ã¥ Ã® Ã³Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¾Ã¹Ã¥Ã¬ (executive):" << endl;
     exec.display();
 
     return 0;
