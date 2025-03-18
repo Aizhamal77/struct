@@ -60,19 +60,19 @@ int main() {
     Pstring2 pstr;
     string inputStr;
 
-    cout << "Ââåäèòå ñòðîêó: ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã²Ã°Ã®ÃªÃ³: ";
     getline(cin, inputStr);
 
     pstr.left(inputStr, 5);
-    cout << "Ëåâûå 5 ñèìâîëîâ: ";
+    cout << "Ã‹Ã¥Ã¢Ã»Ã¥ 5 Ã±Ã¨Ã¬Ã¢Ã®Ã«Ã®Ã¢: ";
     pstr.display();
 
     pstr.mid(inputStr, 3, 4);
-    cout << "Ñèìâîëû ñ 3 ïî 6 (âêëþ÷èòåëüíî): ";
+    cout << "Ã‘Ã¨Ã¬Ã¢Ã®Ã«Ã» Ã± 3 Ã¯Ã® 6 (Ã¢ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã®): ";
     pstr.display();
 
     pstr.right(inputStr, 4);
-    cout << "Ïðàâûå 4 ñèìâîëà: ";
+    cout << "ÃÃ°Ã Ã¢Ã»Ã¥ 4 Ã±Ã¨Ã¬Ã¢Ã®Ã«Ã : ";
     pstr.display();
 
     return 0;
