@@ -18,7 +18,7 @@ public:
 
     int& operator[](int index) {
         if (index < 0 || index >= size) {
-            throw out_of_range("Индекс за пределами диапазона");
+            throw out_of_range("Г€Г­Г¤ГҐГЄГ± Г§Г  ГЇГ°ГҐГ¤ГҐГ«Г Г¬ГЁ Г¤ГЁГ ГЇГ Г§Г®Г­Г ");
         }
         return arr[index];
     }
@@ -34,7 +34,7 @@ public:
 
     int& operator[](int index) {
         if (index < lowerBound || index > upperBound) {
-            throw out_of_range("Индекс за пределами диапазона");
+            throw out_of_range("Г€Г­Г¤ГҐГЄГ± Г§Г  ГЇГ°ГҐГ¤ГҐГ«Г Г¬ГЁ Г¤ГЁГ ГЇГ Г§Г®Г­Г ");
         }
         return arr[index - lowerBound];
     }
@@ -43,18 +43,18 @@ public:
 int main() {
     setlocale(LC_ALL, "Rus");
     int lower, upper;
-    cout << "Введите нижнюю и верхнюю границу массива: ";
+    cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г­ГЁГ¦Г­ГѕГѕ ГЁ ГўГҐГ°ГµГ­ГѕГѕ ГЈГ°Г Г­ГЁГ¶Гі Г¬Г Г±Г±ГЁГўГ : ";
     cin >> lower >> upper;
 
     safehilo arr(lower, upper);
 
     for (int i = lower; i <= upper; ++i) {
-        cout << "Введите значение для индекса " << i << ": ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ Г¤Г«Гї ГЁГ­Г¤ГҐГЄГ±Г  " << i << ": ";
         cin >> arr[i];
     }
 
     for (int i = lower; i <= upper; ++i) {
-        cout << "Значение в индексе " << i << ": " << arr[i] << endl;
+        cout << "Г‡Г­Г Г·ГҐГ­ГЁГҐ Гў ГЁГ­Г¤ГҐГЄГ±ГҐ " << i << ": " << arr[i] << endl;
     }
 
     return 0;
