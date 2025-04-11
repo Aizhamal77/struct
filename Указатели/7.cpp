@@ -16,7 +16,7 @@ public:
     }
 
     void printData() const {
-        cout << "Имя: " << name << ", Зарплата: " << salary << endl;
+        cout << "Г€Г¬Гї: " << name << ", Г‡Г Г°ГЇГ«Г ГІГ : " << salary << endl;
     }
 
     float getSalary() const {
@@ -32,7 +32,7 @@ void salsort(Person* persPtr[], int size) {
     for (int j = 0; j < size - 1; j++) {
         for (int k = j + 1; k < size; k++) {
             if ((*(persPtr + j))->getSalary() > (*(persPtr + k))->getSalary()) {
-                // Обмен указателями
+                // ГЋГЎГ¬ГҐГ­ ГіГЄГ Г§Г ГІГҐГ«ГїГ¬ГЁ
                 Person* temp = *(persPtr + j);
                 *(persPtr + j) = *(persPtr + k);
                 *(persPtr + k) = temp;
@@ -54,9 +54,9 @@ public:
         float salary;
 
         for (int i = 0; i < size; i++) {
-            cout << "Введите имя человека " << (i + 1) << ": ";
+            cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ¬Гї Г·ГҐГ«Г®ГўГҐГЄГ  " << (i + 1) << ": ";
             cin >> name;
-            cout << "Введите зарплату для " << name << ": ";
+            cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г§Г Г°ГЇГ«Г ГІГі Г¤Г«Гї " << name << ": ";
             cin >> salary;
 
             persPtr[i] = new Person(name, salary);
@@ -64,7 +64,7 @@ public:
     }
 
     void output() const {
-        cout << "\nДанные сотрудников:\n";
+        cout << "\nГ„Г Г­Г­Г»ГҐ Г±Г®ГІГ°ГіГ¤Г­ГЁГЄГ®Гў:\n";
         for (int i = 0; i < size; i++) {
             persPtr[i]->printData();
         }
@@ -89,7 +89,7 @@ int main() {
     list.output();   
 
     list.sortBySalary(); 
-    cout << "\nПосле сортировки:\n";
+    cout << "\nГЏГ®Г±Г«ГҐ Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ:\n";
     list.output();     
 
     list.osvb(); 
