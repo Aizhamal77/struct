@@ -18,7 +18,7 @@ public:
     void display();       
 };
 
-// Добавление элемента в конец списка
+// Г„Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ  Гў ГЄГ®Г­ГҐГ¶ Г±ГЇГЁГ±ГЄГ 
 void linklist::additem(int d) {
     link* newLink = new link;   
     newLink->data = d;         
@@ -36,7 +36,7 @@ void linklist::additem(int d) {
     }
 }
 
-// Вывод всех элементов списка
+// Г‚Г»ГўГ®Г¤ ГўГ±ГҐГµ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г±ГЇГЁГ±ГЄГ 
 void linklist::display() {
     link* current = first;  
     while (current != nullptr) {
@@ -45,7 +45,7 @@ void linklist::display() {
     }
 }
 
-// Деструктор для удаления всех элементов
+// Г„ГҐГ±ГІГ°ГіГЄГІГ®Г° Г¤Г«Гї ГіГ¤Г Г«ГҐГ­ГЁГї ГўГ±ГҐГµ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў
 linklist::~linklist() {
     link* current = first; 
     while (current != nullptr) {
