@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-const int NUM_ARR = 10;   // Кол-во массивов
-const int ARR_SIZE = 10;   // Размер каждого массива
-const int TOT_SIZE = NUM_ARR * ARR_SIZE;  // Общий размер
+const int NUM_ARR = 10;   // ГЉГ®Г«-ГўГ® Г¬Г Г±Г±ГЁГўГ®Гў
+const int ARR_SIZE = 10;   // ГђГ Г§Г¬ГҐГ° ГЄГ Г¦Г¤Г®ГЈГ® Г¬Г Г±Г±ГЁГўГ 
+const int TOT_SIZE = NUM_ARR * ARR_SIZE;  // ГЋГЎГ№ГЁГ© Г°Г Г§Г¬ГҐГ°
 
 class BigArr {
 private:
@@ -20,10 +20,10 @@ public:
             delete[] * (arr + i);
     }
 
-    // Перегрузка оператора []
+    // ГЏГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г®ГЇГҐГ°Г ГІГ®Г°Г  []
     int& operator[](int index) {
         if (index < 0 || index >= TOT_SIZE) {
-            cout << "Ошибка: выход за границы массива!" << endl;
+            cout << "ГЋГёГЁГЎГЄГ : ГўГ»ГµГ®Г¤ Г§Г  ГЈГ°Г Г­ГЁГ¶Г» Г¬Г Г±Г±ГЁГўГ !" << endl;
             exit(1);
         }
 
@@ -33,13 +33,13 @@ public:
         return *(*(arr + outer) + inner);
     }
 
-    // Метод заполнения массива
+    // ГЊГҐГІГ®Г¤ Г§Г ГЇГ®Г«Г­ГҐГ­ГЁГї Г¬Г Г±Г±ГЁГўГ 
     void fill() {
         for (int i = 0; i < TOT_SIZE; ++i)
             (*this)[i] = i;
     }
 
-    // Метод вывода массива
+    // ГЊГҐГІГ®Г¤ ГўГ»ГўГ®Г¤Г  Г¬Г Г±Г±ГЁГўГ 
     void show() {
         for (int i = 0; i < TOT_SIZE; ++i) {
             cout << (*this)[i] << " ";
@@ -54,7 +54,7 @@ int main() {
 
     BigArr arr;
     arr.fill();
-    cout << "Содержимое массива:" << endl;
+    cout << "Г‘Г®Г¤ГҐГ°Г¦ГЁГ¬Г®ГҐ Г¬Г Г±Г±ГЁГўГ :" << endl;
     arr.show();
 
     return 0;
