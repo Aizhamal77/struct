@@ -49,7 +49,7 @@ public:
 
    
     void input() {
-        cout << "Ââåäèòå ñòğîêó: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã²Ã°Ã®ÃªÃ³: ";
         char buffer[100]; 
         cin.getline(buffer, 100);
 
@@ -83,7 +83,7 @@ public:
 int main() {
     setlocale(LC_ALL, "Rus");
 
-    String str1("Ïğèâåò");
+    String str1("ÃÃ°Ã¨Ã¢Ã¥Ã²");
     str1.show(); 
 
     str1.input();  
