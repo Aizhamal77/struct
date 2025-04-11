@@ -18,10 +18,10 @@ public:
         while (current != nullptr) {
             Link* temp = current;
             current = current->next;
-            cout << "Óäàëåíèå ıëåìåíòà: " << temp->data << endl;
+            cout << "Ã“Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã : " << temp->data << endl;
             delete temp;
         }
-        cout << "Âñå ıëåìåíòû ñïèñêà áûëè óäàëåíû." << endl;
+        cout << "Ã‚Ã±Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã» Ã±Ã¯Ã¨Ã±ÃªÃ  Ã¡Ã»Ã«Ã¨ Ã³Ã¤Ã Ã«Ã¥Ã­Ã»." << endl;
     }
 
     void addItem(int data) {
@@ -49,7 +49,7 @@ int main() {
     list.addItem(49);
     list.addItem(64);
 
-    cout << "Ñîäåğæèìîå ñïèñêà:" << endl;
+    cout << "Ã‘Ã®Ã¤Ã¥Ã°Ã¦Ã¨Ã¬Ã®Ã¥ Ã±Ã¯Ã¨Ã±ÃªÃ :" << endl;
     list.display();
 
     return 0;
