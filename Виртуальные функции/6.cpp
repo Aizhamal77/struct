@@ -10,7 +10,7 @@ public:
     bMoney(long double amt = 0.0) : amount(amt) {}
 
     void input() {
-        cout << "Ââåäèòå ñóììó (â ôîðìàòå: 100.25): ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã³Ã¬Ã¬Ã³ (Ã¢ Ã´Ã®Ã°Ã¬Ã Ã²Ã¥: 100.25): ";
         cin >> amount;
     }
 
@@ -35,7 +35,7 @@ public:
             return bMoney(amount / other.amount);
         }
         else {
-            cout << "Îøèáêà: äåëåíèå íà íîëü!\n";
+            cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã¤Ã¥Ã«Ã¥Ã­Ã¨Ã¥ Ã­Ã  Ã­Ã®Ã«Ã¼!\n";
             return bMoney(0.0); 
         }
     }
@@ -49,7 +49,7 @@ public:
             return bMoney(num / money.amount);
         }
         else {
-            cout << "Îøèáêà: äåëåíèå íà íîëü!\n";
+            cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã¤Ã¥Ã«Ã¥Ã­Ã¨Ã¥ Ã­Ã  Ã­Ã®Ã«Ã¼!\n";
             return bMoney(0.0); 
         }
     }
@@ -68,46 +68,46 @@ public:
     void inputData() {
         money1.input();
         money2.input();
-        cout << "Ââåäèòå ÷èñëî äëÿ îïåðàöèé ñ äåíüãàìè: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã¤Ã«Ã¿ Ã®Ã¯Ã¥Ã°Ã Ã¶Ã¨Ã© Ã± Ã¤Ã¥Ã­Ã¼Ã£Ã Ã¬Ã¨: ";
         cin >> num;
     }
 
     void Operations() {
-        cout << "\nÐåçóëüòàòû îïåðàöèé ñ äåíüãàìè:\n";
+        cout << "\nÃÃ¥Ã§Ã³Ã«Ã¼Ã²Ã Ã²Ã» Ã®Ã¯Ã¥Ã°Ã Ã¶Ã¨Ã© Ã± Ã¤Ã¥Ã­Ã¼Ã£Ã Ã¬Ã¨:\n";
 
-        // Ñëîæåíèå
+        // Ã‘Ã«Ã®Ã¦Ã¥Ã­Ã¨Ã¥
         bMoney result = money1 + money2;
-        cout << "Ñëîæåíèå: ";
+        cout << "Ã‘Ã«Ã®Ã¦Ã¥Ã­Ã¨Ã¥: ";
         result.output();
         cout << endl;
 
-        // Âû÷èòàíèå
+        // Ã‚Ã»Ã·Ã¨Ã²Ã Ã­Ã¨Ã¥
         result = money1 - money2;
-        cout << "Âû÷èòàíèå: ";
+        cout << "Ã‚Ã»Ã·Ã¨Ã²Ã Ã­Ã¨Ã¥: ";
         result.output();
         cout << endl;
 
-        // Óìíîæåíèå
+        // Ã“Ã¬Ã­Ã®Ã¦Ã¥Ã­Ã¨Ã¥
         result = money1 * money2;
-        cout << "Óìíîæåíèå: ";
+        cout << "Ã“Ã¬Ã­Ã®Ã¦Ã¥Ã­Ã¨Ã¥: ";
         result.output();
         cout << endl;
 
-        // Äåëåíèå
+        // Ã„Ã¥Ã«Ã¥Ã­Ã¨Ã¥
         result = money1 / money2;
-        cout << "Äåëåíèå: ";
+        cout << "Ã„Ã¥Ã«Ã¥Ã­Ã¨Ã¥: ";
         result.output();
         cout << endl;
 
-        // Óìíîæåíèå ÷èñëà íà äåíüãè
+        // Ã“Ã¬Ã­Ã®Ã¦Ã¥Ã­Ã¨Ã¥ Ã·Ã¨Ã±Ã«Ã  Ã­Ã  Ã¤Ã¥Ã­Ã¼Ã£Ã¨
         result = num * money1;
-        cout << "×èñëî * äåíüãè: ";
+        cout << "Ã—Ã¨Ã±Ã«Ã® * Ã¤Ã¥Ã­Ã¼Ã£Ã¨: ";
         result.output();
         cout << endl;
 
-        // Äåëåíèå ÷èñëà íà äåíüãè
+        // Ã„Ã¥Ã«Ã¥Ã­Ã¨Ã¥ Ã·Ã¨Ã±Ã«Ã  Ã­Ã  Ã¤Ã¥Ã­Ã¼Ã£Ã¨
         result = num / money2;
-        cout << "×èñëî / äåíüãè: ";
+        cout << "Ã—Ã¨Ã±Ã«Ã® / Ã¤Ã¥Ã­Ã¼Ã£Ã¨: ";
         result.output();
         cout << endl;
     }
