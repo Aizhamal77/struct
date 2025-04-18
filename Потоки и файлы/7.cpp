@@ -15,7 +15,7 @@ public:
     static void openFile() {
         file.open("employees.txt", ios::in | ios::out | ios::app);
         if (!file.is_open()) {
-            cerr << "Îøèáêà îòêðûòèÿ ôàéëà!\n";
+            cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã®Ã²ÃªÃ°Ã»Ã²Ã¨Ã¿ Ã´Ã Ã©Ã«Ã !\n";
             exit(1);
         }
     }
@@ -26,21 +26,21 @@ public:
     }
 
     void input() {
-        cout << "Ââåäèòå èìÿ: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¨Ã¬Ã¿: ";
         cin >> firstName;
-        cout << "Ââåäèòå îò÷åñòâî: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã®Ã²Ã·Ã¥Ã±Ã²Ã¢Ã®: ";
         cin >> middleName;
-        cout << "Ââåäèòå ôàìèëèþ: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã´Ã Ã¬Ã¨Ã«Ã¨Ã¾: ";
         cin >> lastName;
-        cout << "Ââåäèòå íîìåð ñîòðóäíèêà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
         cin >> empNumber;
     }
 
     void output() const {
-        cout << "Èìÿ: " << firstName
-            << ", Îò÷åñòâî: " << middleName
-            << ", Ôàìèëèÿ: " << lastName
-            << ", Íîìåð: " << empNumber << endl;
+        cout << "ÃˆÃ¬Ã¿: " << firstName
+            << ", ÃŽÃ²Ã·Ã¥Ã±Ã²Ã¢Ã®: " << middleName
+            << ", Ã”Ã Ã¬Ã¨Ã«Ã¨Ã¿: " << lastName
+            << ", ÃÃ®Ã¬Ã¥Ã°: " << empNumber << endl;
     }
 
     void write() const {
@@ -68,7 +68,7 @@ public:
             current++;
         }
 
-        return false; // íå íàøëè
+        return false; // Ã­Ã¥ Ã­Ã Ã¸Ã«Ã¨
     }
 
     static void readAll() {
@@ -77,12 +77,12 @@ public:
         unsigned long num;
         int count = 0;
 
-        cout << "\nÑïèñîê âñåõ ñîòðóäíèêîâ:\n";
+        cout << "\nÃ‘Ã¯Ã¨Ã±Ã®Ãª Ã¢Ã±Ã¥Ãµ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ®Ã¢:\n";
         while (file >> f >> m >> l >> num) {
-            cout << ++count << ") Èìÿ: " << f
-                << ", Îò÷åñòâî: " << m
-                << ", Ôàìèëèÿ: " << l
-                << ", Íîìåð: " << num << endl;
+            cout << ++count << ") ÃˆÃ¬Ã¿: " << f
+                << ", ÃŽÃ²Ã·Ã¥Ã±Ã²Ã¢Ã®: " << m
+                << ", Ã”Ã Ã¬Ã¨Ã«Ã¨Ã¿: " << l
+                << ", ÃÃ®Ã¬Ã¥Ã°: " << num << endl;
         }
     }
 };
@@ -97,17 +97,17 @@ int main() {
     int choice;
 
     do {
-        cout << "\n1 — Äîáàâèòü ñîòðóäíèêà\n";
-        cout << "2 — Ïðî÷èòàòü çàïèñü ïî íîìåðó\n";
-        cout << "3 — Ïîêàçàòü âñåõ ñîòðóäíèêîâ\n";
-        cout << "0 — Âûõîä\n";
-        cout << "Âûáåðèòå äåéñòâèå: ";
+        cout << "\n1 â€” Ã„Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ \n";
+        cout << "2 â€” ÃÃ°Ã®Ã·Ã¨Ã²Ã Ã²Ã¼ Ã§Ã Ã¯Ã¨Ã±Ã¼ Ã¯Ã® Ã­Ã®Ã¬Ã¥Ã°Ã³\n";
+        cout << "3 â€” ÃÃ®ÃªÃ Ã§Ã Ã²Ã¼ Ã¢Ã±Ã¥Ãµ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ®Ã¢\n";
+        cout << "0 â€” Ã‚Ã»ÃµÃ®Ã¤\n";
+        cout << "Ã‚Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã¤Ã¥Ã©Ã±Ã²Ã¢Ã¨Ã¥: ";
         cin >> choice;
 
         while (cin.fail() || choice < 0 || choice > 3) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Íåâåðíûé ââîä. Ïîâòîðèòå: ";
+            cout << "ÃÃ¥Ã¢Ã¥Ã°Ã­Ã»Ã© Ã¢Ã¢Ã®Ã¤. ÃÃ®Ã¢Ã²Ã®Ã°Ã¨Ã²Ã¥: ";
             cin >> choice;
         }
 
@@ -115,16 +115,16 @@ int main() {
         case 1:
             person.input();
             person.write();
-            cout << "Äàííûå ñîõðàíåíû.\n";
+            cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Ã±Ã®ÃµÃ°Ã Ã­Ã¥Ã­Ã».\n";
             break;
         case 2: {
             int num;
-            cout << "Ââåäèòå íîìåð çàïèñè: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã§Ã Ã¯Ã¨Ã±Ã¨: ";
             cin >> num;
             if (person.read(num))
                 person.output();
             else
-                cout << "Çàïèñü íå íàéäåíà.\n";
+                cout << "Ã‡Ã Ã¯Ã¨Ã±Ã¼ Ã­Ã¥ Ã­Ã Ã©Ã¤Ã¥Ã­Ã .\n";
             break;
         }
         case 3:
@@ -136,6 +136,6 @@ int main() {
 
     static fstream file; 
 
-    cout << "Çàâåðøåíèå.\n";
+    cout << "Ã‡Ã Ã¢Ã¥Ã°Ã¸Ã¥Ã­Ã¨Ã¥.\n";
     return 0;
 }
