@@ -8,7 +8,7 @@ public:
     void run() {
         string fileName;
 
-        cout << "Ââåäèòå èìÿ ôàéëà (áåç ðàñøèðåíèÿ): ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¨Ã¬Ã¿ Ã´Ã Ã©Ã«Ã  (Ã¡Ã¥Ã§ ÄŸÃ Ã±Ã¸Ã¨ÄŸÃ¥Ã­Ã¨Ã¿): ";
         cin >> fileName;
         fileName += ".txt";
 
@@ -20,14 +20,14 @@ private:
         ifstream file(fileName, ios::binary);
 
         if (!file) {
-            cerr << "Îøèáêà: íå óäàëîñü îòêðûòü ôàéë " << fileName << endl;
+            cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã­Ã¥ Ã³Ã¤Ã Ã«Ã®Ã±Ã¼ Ã®Ã²ÃªÄŸÃ»Ã²Ã¼ Ã´Ã Ã©Ã« " << fileName << endl;
             return;
         }
 
         file.seekg(0, ios::end);  
         streampos size = file.tellg(); 
 
-        cout << "Ðàçìåð ôàéëà " << fileName << " ñîñòàâëÿåò: " << size << " áàéò.\n";
+        cout << "ÄžÃ Ã§Ã¬Ã¥ÄŸ Ã´Ã Ã©Ã«Ã  " << fileName << " Ã±Ã®Ã±Ã²Ã Ã¢Ã«Ã¿Ã¥Ã²: " << size << " Ã¡Ã Ã©Ã².\n";
 
         file.close(); 
     }
