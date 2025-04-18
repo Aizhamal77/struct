@@ -31,12 +31,12 @@ public:
 
     Frac(int n, int d) : num(n), den(d) {
         if (den == 0) {
-            throw invalid_argument("Знаменатель не может быть нулевым!");
+            throw invalid_argument("Г‡Г­Г Г¬ГҐГ­Г ГІГҐГ«Гј Г­ГҐ Г¬Г®Г¦ГҐГІ ГЎГ»ГІГј Г­ГіГ«ГҐГўГ»Г¬!");
         }
         reduce();
     }
 
-    // Перегрузка операторов для дробей
+    // ГЏГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г®ГЇГҐГ°Г ГІГ®Г°Г®Гў Г¤Г«Гї Г¤Г°Г®ГЎГҐГ©
     Frac operator+(const Frac& f) const {
         return Frac(num * f.den + f.num * den, den * f.den);
     }
@@ -51,7 +51,7 @@ public:
 
     Frac operator/(const Frac& f) const {
         if (f.num == 0) {
-            throw invalid_argument("Ошибка: деление на ноль.");
+            throw invalid_argument("ГЋГёГЁГЎГЄГ : Г¤ГҐГ«ГҐГ­ГЁГҐ Г­Г  Г­Г®Г«Гј.");
         }
         return Frac(num * f.den, den * f.num);
     }
@@ -66,7 +66,7 @@ public:
         }
 
         if (f.den == 0) {
-            throw invalid_argument("Знаменатель не может быть нулевым!");
+            throw invalid_argument("Г‡Г­Г Г¬ГҐГ­Г ГІГҐГ«Гј Г­ГҐ Г¬Г®Г¦ГҐГІ ГЎГ»ГІГј Г­ГіГ«ГҐГўГ»Г¬!");
         }
 
         f.reduce();
@@ -88,7 +88,7 @@ public:
             try {
                 cin >> f;
                 if (cin.fail()) {
-                    throw runtime_error("Ошибка ввода.");
+                    throw runtime_error("ГЋГёГЁГЎГЄГ  ГўГўГ®Г¤Г .");
                 }
                 break;
             }
@@ -105,19 +105,19 @@ public:
     static char inputOperator() {
         char op;
         while (true) {
-            cout << "Введите оператор (+, -, *, /): ";
+            cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г®ГЇГҐГ°Г ГІГ®Г° (+, -, *, /): ";
             cin >> op;
             if (op == '+' || op == '-' || op == '*' || op == '/') {
                 return op;
             }
-            cout << "Недопустимый оператор. Повторите ввод.\n";
+            cout << "ГЌГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г»Г© Г®ГЇГҐГ°Г ГІГ®Г°. ГЏГ®ГўГІГ®Г°ГЁГІГҐ ГўГўГ®Г¤.\n";
         }
     }
 
     static void performCalc() {
-        Frac f1 = inputFraction("Введите первую дробь: ");
+        Frac f1 = inputFraction("Г‚ГўГҐГ¤ГЁГІГҐ ГЇГҐГ°ГўГіГѕ Г¤Г°Г®ГЎГј: ");
         char op = inputOperator();
-        Frac f2 = inputFraction("Введите вторую дробь: ");
+        Frac f2 = inputFraction("Г‚ГўГҐГ¤ГЁГІГҐ ГўГІГ®Г°ГіГѕ Г¤Г°Г®ГЎГј: ");
 
         try {
             Frac result;
@@ -127,16 +127,16 @@ public:
             case '*': result = f1 * f2; break;
             case '/': result = f1 / f2; break;
             }
-            cout << "Ответ: " << result << "\n";
+            cout << "ГЋГІГўГҐГІ: " << result << "\n";
         }
         catch (const exception& e) {
-            cout << "Ошибка при вычислении: " << e.what() << "\n";
+            cout << "ГЋГёГЁГЎГЄГ  ГЇГ°ГЁ ГўГ»Г·ГЁГ±Г«ГҐГ­ГЁГЁ: " << e.what() << "\n";
         }
     }
 
     static bool continueCalc() {
         char cont;
-        cout << "Введите 1 для продолжения или 0 для выхода: ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ 1 Г¤Г«Гї ГЇГ°Г®Г¤Г®Г«Г¦ГҐГ­ГЁГї ГЁГ«ГЁ 0 Г¤Г«Гї ГўГ»ГµГ®Г¤Г : ";
         cin >> cont;
         return cont == '1';
     }
@@ -152,6 +152,6 @@ int main() {
         continueProgram = Calculator::continueCalc();
     }
 
-    cout << "Работа завершена.\n";
+    cout << "ГђГ ГЎГ®ГІГ  Г§Г ГўГҐГ°ГёГҐГ­Г .\n";
     return 0;
 }
