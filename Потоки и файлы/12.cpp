@@ -11,14 +11,14 @@ public:
     unsigned long employeeNumber;
 
     void display() const {
-        cout << "Èìÿ: " << firstName << ", Îò÷åñòâî: " << middleName
-            << ", Ôàìèëèÿ: " << lastName << ", Íîìåð ðàáîòíèêà: " << employeeNumber << endl;
+        cout << "ÃˆÃ¬Ã¿: " << firstName << ", ÃŽÃ²Ã·Ã¥Ã±Ã²Ã¢Ã®: " << middleName
+            << ", Ã”Ã Ã¬Ã¨Ã«Ã¨Ã¿: " << lastName << ", ÃÃ®Ã¬Ã¥Ã° Ã°Ã Ã¡Ã®Ã²Ã­Ã¨ÃªÃ : " << employeeNumber << endl;
     }
 
     static void findEmployeeByNumber(const string& filename, unsigned long employeeNumber) {
         ifstream inFile(filename);
         if (!inFile) {
-            cerr << "Íå óäàëîñü îòêðûòü ôàéë!" << endl;
+            cerr << "ÃÃ¥ Ã³Ã¤Ã Ã«Ã®Ã±Ã¼ Ã®Ã²ÃªÃ°Ã»Ã²Ã¼ Ã´Ã Ã©Ã«!" << endl;
             return;
         }
 
@@ -26,7 +26,7 @@ public:
         bool found = false;
         while (inFile >> emp.firstName >> emp.middleName >> emp.lastName >> emp.employeeNumber) {
             if (emp.employeeNumber == employeeNumber) {
-                cout << "Ñîòðóäíèê íàéäåí: " << endl;
+                cout << "Ã‘Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨Ãª Ã­Ã Ã©Ã¤Ã¥Ã­: " << endl;
                 emp.display();
                 found = true;
                 break;
@@ -34,7 +34,7 @@ public:
         }
 
         if (!found) {
-            cout << "Ñîòðóäíèê ñ íîìåðîì " << employeeNumber << " íå íàéäåí." << endl;
+            cout << "Ã‘Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨Ãª Ã± Ã­Ã®Ã¬Ã¥Ã°Ã®Ã¬ " << employeeNumber << " Ã­Ã¥ Ã­Ã Ã©Ã¤Ã¥Ã­." << endl;
         }
 
         inFile.close();
@@ -43,7 +43,7 @@ public:
     void saveToFile(const string& filename) const {
         ofstream outFile(filename, ios::app);
         if (!outFile) {
-            cerr << "Íå óäàëîñü îòêðûòü ôàéë äëÿ çàïèñè!" << endl;
+            cerr << "ÃÃ¥ Ã³Ã¤Ã Ã«Ã®Ã±Ã¼ Ã®Ã²ÃªÃ°Ã»Ã²Ã¼ Ã´Ã Ã©Ã« Ã¤Ã«Ã¿ Ã§Ã Ã¯Ã¨Ã±Ã¨!" << endl;
             return;
         }
         outFile << firstName << " " << middleName << " " << lastName << " " << employeeNumber << endl;
@@ -52,10 +52,10 @@ public:
 };
 
 void displayMenu() {
-    cout << "Âûáåðèòå äåéñòâèå:" << endl;
-    cout << "1. Äîáàâèòü ñîòðóäíèêà" << endl;
-    cout << "2. Íàéòè ñîòðóäíèêà ïî íîìåðó (íàæìèòå 'f')" << endl;
-    cout << "0. Âûõîä" << endl;
+    cout << "Ã‚Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã¤Ã¥Ã©Ã±Ã²Ã¢Ã¨Ã¥:" << endl;
+    cout << "1. Ã„Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ " << endl;
+    cout << "2. ÃÃ Ã©Ã²Ã¨ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  Ã¯Ã® Ã­Ã®Ã¬Ã¥Ã°Ã³ (Ã­Ã Ã¦Ã¬Ã¨Ã²Ã¥ 'f')" << endl;
+    cout << "0. Ã‚Ã»ÃµÃ®Ã¤" << endl;
 }
 
 int main() {
@@ -70,22 +70,22 @@ int main() {
         cin >> option;
 
         if (option == '1') {
-            cout << "Ââåäèòå èìÿ ñîòðóäíèêà: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¨Ã¬Ã¿ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
             cin >> emp.firstName;
-            cout << "Ââåäèòå îò÷åñòâî ñîòðóäíèêà: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã®Ã²Ã·Ã¥Ã±Ã²Ã¢Ã® Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
             cin >> emp.middleName;
-            cout << "Ââåäèòå ôàìèëèþ ñîòðóäíèêà: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã´Ã Ã¬Ã¨Ã«Ã¨Ã¾ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
             cin >> emp.lastName;
-            cout << "Ââåäèòå íîìåð ðàáîòíèêà: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã°Ã Ã¡Ã®Ã²Ã­Ã¨ÃªÃ : ";
             cin >> emp.employeeNumber;
 
             emp.saveToFile(filename);
-            cout << "Ñîòðóäíèê äîáàâëåí!" << endl;
+            cout << "Ã‘Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨Ãª Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­!" << endl;
 
         }
         else if (option == 'f' || option == 'F') {
             unsigned long searchNumber;
-            cout << "Ââåäèòå íîìåð ðàáîòíèêà äëÿ ïîèñêà: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã°Ã Ã¡Ã®Ã²Ã­Ã¨ÃªÃ  Ã¤Ã«Ã¿ Ã¯Ã®Ã¨Ã±ÃªÃ : ";
             cin >> searchNumber;
 
             Employee::findEmployeeByNumber(filename, searchNumber);
@@ -94,7 +94,7 @@ int main() {
             break;
         }
         else {
-            cout << "Íåâåðíûé âûáîð, ïîïðîáóéòå ñíîâà." << endl;
+            cout << "ÃÃ¥Ã¢Ã¥Ã°Ã­Ã»Ã© Ã¢Ã»Ã¡Ã®Ã°, Ã¯Ã®Ã¯Ã°Ã®Ã¡Ã³Ã©Ã²Ã¥ Ã±Ã­Ã®Ã¢Ã ." << endl;
         }
     }
 
