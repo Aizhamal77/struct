@@ -13,27 +13,27 @@ public:
         ofstream outFile("employees.txt");
 
         if (!outFile) {
-            cerr << "Íå óäàëîñü îòêðûòü ôàéë äëÿ çàïèñè!" << endl;
+            cerr << "ÃÄº Ã³Ã¤Å•Ã«Ã®Å„Ã¼ Ã®ÅˆÄ™Ä‘Å±ÅˆÃ¼ Ã´Å•Ã©Ã« Ã¤Ã«Ë™ Ã§Å•ÄÄÅ„Ä!" << endl;
             return;
         }
 
         while (continueInput == 1) {
-            cout << "Ââåäèòå èìÿ: ";
+            cout << "Ã‚Ã¢ÄºÃ¤ÄÅˆÄº ÄÄ›Ë™: ";
             cin >> firstName;
-            cout << "Ââåäèòå îò÷åñòâî: ";
+            cout << "Ã‚Ã¢ÄºÃ¤ÄÅˆÄº Ã®ÅˆÃ·ÄºÅ„ÅˆÃ¢Ã®: ";
             cin >> middleName;
-            cout << "Ââåäèòå ôàìèëèþ: ";
+            cout << "Ã‚Ã¢ÄºÃ¤ÄÅˆÄº Ã´Å•Ä›ÄÃ«ÄÅ£: ";
             cin >> lastName;
-            cout << "Ââåäèòå íîìåð ðàáîòíèêà: ";
+            cout << "Ã‚Ã¢ÄºÃ¤ÄÅˆÄº Ã­Ã®Ä›ÄºÄ‘ Ä‘Å•Ã¡Ã®ÅˆÃ­ÄÄ™Å•: ";
             cin >> empNum;
 
             outFile << firstName << " " << middleName << " " << lastName << " " << empNum << endl;
 
-            cout << "Õîòèòå ââåñòè äàííûå äëÿ äðóãîãî ñîòðóäíèêà? (1 — äà, 0 — íåò): ";
+            cout << "ÅÃ®ÅˆÄÅˆÄº Ã¢Ã¢ÄºÅ„ÅˆÄ Ã¤Å•Ã­Ã­Å±Äº Ã¤Ã«Ë™ Ã¤Ä‘Ã³ÄƒÃ®ÄƒÃ® Å„Ã®ÅˆÄ‘Ã³Ã¤Ã­ÄÄ™Å•? (1 â€” Ã¤Å•, 0 â€” Ã­ÄºÅˆ): ";
             cin >> continueInput;
 
             while (continueInput != 0 && continueInput != 1) {
-                cout << "Îøèáêà ââîäà! Ââåäèòå 1 äëÿ ïðîäîëæåíèÿ èëè 0 äëÿ çàâåðøåíèÿ: ";
+                cout << "ÃŽÅ™ÄÃ¡Ä™Å• Ã¢Ã¢Ã®Ã¤Å•! Ã‚Ã¢ÄºÃ¤ÄÅˆÄº 1 Ã¤Ã«Ë™ ÄÄ‘Ã®Ã¤Ã®Ã«Ä‡ÄºÃ­ÄË™ ÄÃ«Ä 0 Ã¤Ã«Ë™ Ã§Å•Ã¢ÄºÄ‘Å™ÄºÃ­ÄË™: ";
                 cin >> continueInput;
             }
         }
@@ -43,17 +43,17 @@ public:
         ifstream inFile("employees.txt");
 
         if (!inFile) {
-            cerr << "Íå óäàëîñü îòêðûòü ôàéë äëÿ ÷òåíèÿ!" << endl;
+            cerr << "ÃÄº Ã³Ã¤Å•Ã«Ã®Å„Ã¼ Ã®ÅˆÄ™Ä‘Å±ÅˆÃ¼ Ã´Å•Ã©Ã« Ã¤Ã«Ë™ Ã·ÅˆÄºÃ­ÄË™!" << endl;
             return;
         }
 
         string firstNameRead, middleNameRead, lastNameRead;
         unsigned long empNumRead;
 
-        cout << "\nÑîõðàíåííûå äàííûå ñîòðóäíèêîâ:\n";
+        cout << "\nÅƒÃ®Å‘Ä‘Å•Ã­ÄºÃ­Ã­Å±Äº Ã¤Å•Ã­Ã­Å±Äº Å„Ã®ÅˆÄ‘Ã³Ã¤Ã­ÄÄ™Ã®Ã¢:\n";
         while (inFile >> firstNameRead >> middleNameRead >> lastNameRead >> empNumRead) {
-            cout << "Èìÿ: " << firstNameRead << ", Îò÷åñòâî: " << middleNameRead
-                << ", Ôàìèëèÿ: " << lastNameRead << ", Íîìåð ðàáîòíèêà: " << empNumRead << endl;
+            cout << "ÄŒÄ›Ë™: " << firstNameRead << ", ÃŽÅˆÃ·ÄºÅ„ÅˆÃ¢Ã®: " << middleNameRead
+                << ", Ã”Å•Ä›ÄÃ«ÄË™: " << lastNameRead << ", ÃÃ®Ä›ÄºÄ‘ Ä‘Å•Ã¡Ã®ÅˆÃ­ÄÄ™Å•: " << empNumRead << endl;
         }
 
         inFile.close();
