@@ -58,7 +58,7 @@ public:
             tokens[++top] = token;
         }
         else {
-            cout << "Ñòåê ïåðåïîëíåí!" << endl;
+            cout << "Ã‘Ã²Ã¥Ãª Ã¯Ã¥Ã°Ã¥Ã¯Ã®Ã«Ã­Ã¥Ã­!" << endl;
         }
     }
 
@@ -67,7 +67,7 @@ public:
             return tokens[top--];
         }
         else {
-            cout << "Ñòåê ïóñò!" << endl;
+            cout << "Ã‘Ã²Ã¥Ãª Ã¯Ã³Ã±Ã²!" << endl;
             return nullptr;
         }
     }
@@ -83,10 +83,10 @@ float compute(Stack& stack) {
     while (!stack.isEmpty()) {
         Token* token = stack.pop();
         if (token->getOperator() == '\0') {  
-            cout << "×èñëî: " << token->getNum() << endl;
+            cout << "Ã—Ã¨Ã±Ã«Ã®: " << token->getNum() << endl;
         }
         else { 
-            cout << "Îïåðàòîð: " << token->getOperator() << endl;
+            cout << "ÃŽÃ¯Ã¥Ã°Ã Ã²Ã®Ã°: " << token->getOperator() << endl;
         }
         delete token; 
     }
