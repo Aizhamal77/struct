@@ -13,27 +13,27 @@ private:
 
 public:
     void input() {
-        cout << "Ââåäèòå èìÿ: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¨Ã¬Ã¿: ";
         cin >> firstName;
-        cout << "Ââåäèòå îò÷åñòâî: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã®Ã²Ã·Ã¥Ã±Ã²Ã¢Ã®: ";
         cin >> middleName;
-        cout << "Ââåäèòå ôàìèëèþ: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã´Ã Ã¬Ã¨Ã«Ã¨Ã¾: ";
         cin >> lastName;
-        cout << "Ââåäèòå íîìåð ñîòðóäíèêà: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
         cin >> empNumber;
     }
 
     void display() const {
-        cout << "Èìÿ: " << firstName
-            << ", Îò÷åñòâî: " << middleName
-            << ", Ôàìèëèÿ: " << lastName
-            << ", Íîìåð ñîòðóäíèêà: " << empNumber << endl;
+        cout << "ÃˆÃ¬Ã¿: " << firstName
+            << ", ÃŽÃ²Ã·Ã¥Ã±Ã²Ã¢Ã®: " << middleName
+            << ", Ã”Ã Ã¬Ã¨Ã«Ã¨Ã¿: " << lastName
+            << ", ÃÃ®Ã¬Ã¥Ã° Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : " << empNumber << endl;
     }
 
     void writeToFile() const {
         ofstream outFile("employees.txt", ios::app); 
         if (!outFile) {
-            cerr << "Îøèáêà ïðè îòêðûòèè ôàéëà äëÿ çàïèñè!\n";
+            cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã®Ã²ÃªÃ°Ã»Ã²Ã¨Ã¨ Ã´Ã Ã©Ã«Ã  Ã¤Ã«Ã¿ Ã§Ã Ã¯Ã¨Ã±Ã¨!\n";
             return;
         }
         outFile << firstName << ' ' << middleName << ' ' << lastName << ' ' << empNumber << '\n';
@@ -43,7 +43,7 @@ public:
     bool readFromFile(int recordNum) {
         ifstream inFile("employees.txt");
         if (!inFile) {
-            cerr << "Îøèáêà ïðè îòêðûòèè ôàéëà äëÿ ÷òåíèÿ!\n";
+            cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¯Ã°Ã¨ Ã®Ã²ÃªÃ°Ã»Ã²Ã¨Ã¨ Ã´Ã Ã©Ã«Ã  Ã¤Ã«Ã¿ Ã·Ã²Ã¥Ã­Ã¨Ã¿!\n";
             return false;
         }
 
@@ -74,39 +74,39 @@ int main() {
     int choice;
 
     do {
-        cout << "\n1 - Ââåñòè è ñîõðàíèòü ñîòðóäíèêà\n";
-        cout << "2 - Ïðî÷èòàòü çàïèñü ïî íîìåðó\n";
-        cout << "0 - Âûõîä\n";
-        cout << "Âàø âûáîð: ";
+        cout << "\n1 - Ã‚Ã¢Ã¥Ã±Ã²Ã¨ Ã¨ Ã±Ã®ÃµÃ°Ã Ã­Ã¨Ã²Ã¼ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ \n";
+        cout << "2 - ÃÃ°Ã®Ã·Ã¨Ã²Ã Ã²Ã¼ Ã§Ã Ã¯Ã¨Ã±Ã¼ Ã¯Ã® Ã­Ã®Ã¬Ã¥Ã°Ã³\n";
+        cout << "0 - Ã‚Ã»ÃµÃ®Ã¤\n";
+        cout << "Ã‚Ã Ã¸ Ã¢Ã»Ã¡Ã®Ã°: ";
         cin >> choice;
 
         while (cin.fail() || choice < 0 || choice > 2) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Îøèáêà ââîäà. Ïîâòîðèòå âûáîð: ";
+            cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¢Ã¢Ã®Ã¤Ã . ÃÃ®Ã¢Ã²Ã®Ã°Ã¨Ã²Ã¥ Ã¢Ã»Ã¡Ã®Ã°: ";
             cin >> choice;
         }
 
         if (choice == 1) {
             person.input();
             person.writeToFile();
-            cout << "Äàííûå óñïåøíî ñîõðàíåíû!\n";
+            cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Ã³Ã±Ã¯Ã¥Ã¸Ã­Ã® Ã±Ã®ÃµÃ°Ã Ã­Ã¥Ã­Ã»!\n";
         }
         else if (choice == 2) {
             int recordNum;
-            cout << "Ââåäèòå íîìåð çàïèñè (1, 2, 3...): ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã§Ã Ã¯Ã¨Ã±Ã¨ (1, 2, 3...): ";
             cin >> recordNum;
             if (person.readFromFile(recordNum)) {
-                cout << "\nÍàéäåííàÿ çàïèñü:\n";
+                cout << "\nÃÃ Ã©Ã¤Ã¥Ã­Ã­Ã Ã¿ Ã§Ã Ã¯Ã¨Ã±Ã¼:\n";
                 person.display();
             }
             else {
-                cout << "Çàïèñü ñ òàêèì íîìåðîì íå íàéäåíà.\n";
+                cout << "Ã‡Ã Ã¯Ã¨Ã±Ã¼ Ã± Ã²Ã ÃªÃ¨Ã¬ Ã­Ã®Ã¬Ã¥Ã°Ã®Ã¬ Ã­Ã¥ Ã­Ã Ã©Ã¤Ã¥Ã­Ã .\n";
             }
         }
 
     } while (choice != 0);
 
-    cout << "Çàâåðøåíèå ïðîãðàììû.\n";
+    cout << "Ã‡Ã Ã¢Ã¥Ã°Ã¸Ã¥Ã­Ã¨Ã¥ Ã¯Ã°Ã®Ã£Ã°Ã Ã¬Ã¬Ã».\n";
     return 0;
 }
