@@ -11,15 +11,15 @@ protected:
 public:
     virtual void getdata() {
         cin.ignore();
-        cout << "\nÂâåäèòå çàãîëîâîê: ";
+        cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã§Ã Ã£Ã®Ã«Ã®Ã¢Ã®Ãª: ";
         getline(cin, title);
-        cout << "Ââåäèòå öåíó: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¶Ã¥Ã­Ã³: ";
         cin >> price;
     }
 
     virtual void putdata() const {
-        cout << "\nÇàãîëîâîê: " << title;
-        cout << "\nÖåíà: " << price;
+        cout << "\nÃ‡Ã Ã£Ã®Ã«Ã®Ã¢Ã®Ãª: " << title;
+        cout << "\nÃ–Ã¥Ã­Ã : " << price;
     }
 
     virtual bool isOversize() const {
@@ -36,13 +36,13 @@ private:
 public:
     void getdata() override {
         publication::getdata();
-        cout << "Ââåäèòå ÷èñëî ñòðàíèö: ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã±Ã²Ã°Ã Ã­Ã¨Ã¶: ";
         cin >> pages;
     }
 
     void putdata() const override {
         publication::putdata();
-        cout << "\nÑòðàíèö: " << pages;
+        cout << "\nÃ‘Ã²Ã°Ã Ã­Ã¨Ã¶: " << pages;
     }
 
     bool isOversize() const override {
@@ -57,13 +57,13 @@ private:
 public:
     void getdata() override {
         publication::getdata();
-        cout << "Ââåäèòå âðåìÿ çâó÷àíèÿ (â ìèíóòàõ): ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã°Ã¥Ã¬Ã¿ Ã§Ã¢Ã³Ã·Ã Ã­Ã¨Ã¿ (Ã¢ Ã¬Ã¨Ã­Ã³Ã²Ã Ãµ): ";
         cin >> time;
     }
 
     void putdata() const override {
         publication::putdata();
-        cout << "\nÂðåìÿ çâó÷àíèÿ: " << time << " ìèíóò";
+        cout << "\nÃ‚Ã°Ã¥Ã¬Ã¿ Ã§Ã¢Ã³Ã·Ã Ã­Ã¨Ã¿: " << time << " Ã¬Ã¨Ã­Ã³Ã²";
     }
 
     bool isOversize() const override {
@@ -86,7 +86,7 @@ private:
     void inputPublications() {
         char choice;
         do {
-            cout << "\nÂâîäèòü äàííûå äëÿ êíèãè èëè ïëåíêè (b/t)? ";
+            cout << "\nÃ‚Ã¢Ã®Ã¤Ã¨Ã²Ã¼ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã¤Ã«Ã¿ ÃªÃ­Ã¨Ã£Ã¨ Ã¨Ã«Ã¨ Ã¯Ã«Ã¥Ã­ÃªÃ¨ (b/t)? ";
             cin >> choice;
 
             publication* pub = nullptr;
@@ -97,25 +97,25 @@ private:
                 pub = new tape;
             }
             else {
-                cout << "Íåâåðíûé âûáîð. Ïîïðîáóéòå ñíîâà.\n";
+                cout << "ÃÃ¥Ã¢Ã¥Ã°Ã­Ã»Ã© Ã¢Ã»Ã¡Ã®Ã°. ÃÃ®Ã¯Ã°Ã®Ã¡Ã³Ã©Ã²Ã¥ Ã±Ã­Ã®Ã¢Ã .\n";
                 continue;
             }
 
             pub->getdata();
             pubList.push_back(pub);
 
-            cout << "Äîáàâèòü åù¸ îäíó ïóáëèêàöèþ? (y/n): ";
+            cout << "Ã„Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼ Ã¥Ã¹Â¸ Ã®Ã¤Ã­Ã³ Ã¯Ã³Ã¡Ã«Ã¨ÃªÃ Ã¶Ã¨Ã¾? (y/n): ";
             cin >> choice;
 
         } while (choice == 'y' || choice == 'Y');
     }
 
     void outputPublications() const {
-        cout << "\n--- Ñïèñîê ïóáëèêàöèé ---";
+        cout << "\n--- Ã‘Ã¯Ã¨Ã±Ã®Ãª Ã¯Ã³Ã¡Ã«Ã¨ÃªÃ Ã¶Ã¨Ã© ---";
         for (const auto& pub : pubList) {
             pub->putdata();
             if (pub->isOversize()) {
-                cout << "\nÏðåâûøåíèå ðàçìåðà!";
+                cout << "\nÃÃ°Ã¥Ã¢Ã»Ã¸Ã¥Ã­Ã¨Ã¥ Ã°Ã Ã§Ã¬Ã¥Ã°Ã !";
             }
             cout << "\n-------------------------";
         }
