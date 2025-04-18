@@ -11,43 +11,43 @@ private:
 public:
     void get_time() {
         while (true) {
-            cout << "Ââåäèòå ÷àñû: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã Ã±Ã»: ";
             cin >> hours;
             if (cin.fail() || hours < 0 || hours > 23) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
-                cout << "Çíà÷åíèå ÷àñîâ äîëæíî ëåæàòü ìåæäó 0 è 23!" << endl;
+                cout << "Ã‡Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥ Ã·Ã Ã±Ã®Ã¢ Ã¤Ã®Ã«Ã¦Ã­Ã® Ã«Ã¥Ã¦Ã Ã²Ã¼ Ã¬Ã¥Ã¦Ã¤Ã³ 0 Ã¨ 23!" << endl;
                 continue;
             }
             break;
         }
 
         while (true) {
-            cout << "Ââåäèòå ìèíóòû: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¬Ã¨Ã­Ã³Ã²Ã»: ";
             cin >> minutes;
             if (cin.fail() || minutes < 0 || minutes > 59) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
-                cout << "Çíà÷åíèå ìèíóò äîëæíî ëåæàòü ìåæäó 0 è 59!" << endl;
+                cout << "Ã‡Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥ Ã¬Ã¨Ã­Ã³Ã² Ã¤Ã®Ã«Ã¦Ã­Ã® Ã«Ã¥Ã¦Ã Ã²Ã¼ Ã¬Ã¥Ã¦Ã¤Ã³ 0 Ã¨ 59!" << endl;
                 continue;
             }
             break;
         }
 
         while (true) {
-            cout << "Ââåäèòå ñåêóíäû: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã¥ÃªÃ³Ã­Ã¤Ã»: ";
             cin >> seconds;
             if (cin.fail() || seconds < 0 || seconds > 59) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout << "Çíà÷åíèå ñåêóíä äîëæíî ëåæàòü ìåæäó 0 è 59!" << endl;
+                cout << "Ã‡Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥ Ã±Ã¥ÃªÃ³Ã­Ã¤ Ã¤Ã®Ã«Ã¦Ã­Ã® Ã«Ã¥Ã¦Ã Ã²Ã¼ Ã¬Ã¥Ã¦Ã¤Ã³ 0 Ã¨ 59!" << endl;
                 continue;
             }
             break;
         }
     }
     void put_time() {
-        cout << "Âðåìÿ = ";
+        cout << "Ã‚Ã°Ã¥Ã¬Ã¿ = ";
         cout << hours << ":";
         if (minutes < 10) cout << "0"; 
         cout << minutes << ":";
@@ -65,12 +65,12 @@ int main() {
     do {
         time.get_time();  
         time.put_time(); 
-        cout << "Õîòèòå ïðîäîëæèòü ââîä äàííûõ? Ââåäèòå 1 äëÿ ïðîäîëæåíèÿ èëè 0 äëÿ âûõîäà: ";
+        cout << "Ã•Ã®Ã²Ã¨Ã²Ã¥ Ã¯Ã°Ã®Ã¤Ã®Ã«Ã¦Ã¨Ã²Ã¼ Ã¢Ã¢Ã®Ã¤ Ã¤Ã Ã­Ã­Ã»Ãµ? Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ 1 Ã¤Ã«Ã¿ Ã¯Ã°Ã®Ã¤Ã®Ã«Ã¦Ã¥Ã­Ã¨Ã¿ Ã¨Ã«Ã¨ 0 Ã¤Ã«Ã¿ Ã¢Ã»ÃµÃ®Ã¤Ã : ";
         cin >> continueInput;
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     } while (continueInput == '1'); 
 
-    cout << "Çàâåðøåíèå ïðîãðàììû. Ñïàñèáî çà èñïîëüçîâàíèå!" << endl;
+    cout << "Ã‡Ã Ã¢Ã¥Ã°Ã¸Ã¥Ã­Ã¨Ã¥ Ã¯Ã°Ã®Ã£Ã°Ã Ã¬Ã¬Ã». Ã‘Ã¯Ã Ã±Ã¨Ã¡Ã® Ã§Ã  Ã¨Ã±Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã­Ã¨Ã¥!" << endl;
 
     return 0;
 }
